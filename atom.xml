@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-28T00:39:58.000Z</updated>
+  <updated>2018-05-22T13:30:22.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git Basic in Practice</title>
+    <link href="http://yoursite.com/2018/05/22/operation/"/>
+    <id>http://yoursite.com/2018/05/22/operation/</id>
+    <published>2018-05-22T07:43:03.000Z</published>
+    <updated>2018-05-22T13:30:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Git</strong> is a distributed <a href="https://en.wikipedia.org/wiki/Version_control_system" title="Version control system" target="_blank" rel="noopener">version control system</a> for tracking changes in computer files and coordinating work on those files among multiple people.</p><h2 id="Installing-Git"><a href="#Installing-Git" class="headerlink" title="Installing Git"></a>Installing Git</h2><ul><li><strong>Installing on Windows</strong><br>The most official build is available for download on the Git website. Just go to <a href="http://git-scm.com/download/win" target="_blank" rel="noopener">http://git-scm.com/download/win</a> and the download will start automatically.</li><li><strong>Installing on Linux (Ubuntu/Debain)</strong><br>If you’re on a Debian-based distribution, such as Ubuntu, try <code>apt</code>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get install git</span><br></pre></td></tr></table></figure></li></ul><h2 id="Git-setup"><a href="#Git-setup" class="headerlink" title="Git setup"></a>Git setup</h2><p>Git comes with a tool called git config that lets you get and set configuration variables that control all aspects of how Git looks and operates. These variables can be stored in three different places:</p><ol><li><code>/etc/gitconfig</code> file: Contains values applied to every user on the system and all their repositories. If you pass the option <code>--system</code> to git config, it reads and writes from this file specifically. (Because this is a system configuration file, you would need administrative or superuser privilege to make changes to it.)</li><li><code>~/.gitconfig</code>or <code>~/.config/git/config</code> file: Values specific personally to you, the user. You can make Git read and write to this file specifically by passing the –global option.</li><li>config file in the Git directory (that is, <code>.git/config</code>) of whatever repository you’re currently using: Specific to that single repository.<br>The first thing you should do when you install Git is to set your user name and email address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"John Doe"</span></span><br><span class="line">$ git config --global user.email johndoe@example.com</span><br></pre></td></tr></table></figure></li></ol><p>If you want to override this with a different name or email address for specific projects, you can run the command without the <code>--global</code> option when you’re in that project.</p><p>##Git commands</p><p>###Creating or cloning a Git repository<br>If you have a project directory that is currently not under version control and you want to start controlling it with Git, you first need to go to that project’s directory and type:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure></p><p>This creates a new subdirectory named <code>.git</code> that contains all of your necessary repository files — a Git repository skeleton. At this point, nothing in your project is tracked yet. If you want to start version-controlling existing files (as opposed to an empty directory), you should probably begin tracking those files and do an initial commit. You can accomplish that with a few <code>git add</code> commands.<br>If you want to get a copy of an existing Git repository — for example, a project you’d like to contribute to — the command you need is <code>git clone</code> like this:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/libgit2/libgit2</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; is a distributed &lt;a href=&quot;https://en.wikipedia.org/wiki/Version_control_system&quot; title=&quot;Version control system&quot; targe
+      
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
