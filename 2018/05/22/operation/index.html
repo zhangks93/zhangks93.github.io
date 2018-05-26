@@ -64,6 +64,7 @@
 
 
 
+  <meta name="keywords" content="Git," />
 
 
 
@@ -73,18 +74,20 @@
 
 
 
-<meta name="description" content="title: Git Basic in Practicedate: 2018-05-22 15:43:03 tags: GitGit is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple">
+
+<meta name="description" content="Git is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people.Git has three main states that your files can reside in: c">
+<meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Blog">
+<meta property="og:title" content="【Tool】Git Basic in Practice">
 <meta property="og:url" content="http://yoursite.com/2018/05/22/operation/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="title: Git Basic in Practicedate: 2018-05-22 15:43:03 tags: GitGit is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple">
+<meta property="og:description" content="Git is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people.Git has three main states that your files can reside in: c">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://git-scm.com/book/en/v2/images/areas.png">
-<meta property="og:updated_time" content="2018-05-24T06:47:32.000Z">
+<meta property="og:updated_time" content="2018-05-26T05:59:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog">
-<meta name="twitter:description" content="title: Git Basic in Practicedate: 2018-05-22 15:43:03 tags: GitGit is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple">
+<meta name="twitter:title" content="【Tool】Git Basic in Practice">
+<meta name="twitter:description" content="Git is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people.Git has three main states that your files can reside in: c">
 <meta name="twitter:image" content="https://git-scm.com/book/en/v2/images/areas.png">
 
 
@@ -123,7 +126,7 @@
 
 
 
-  <title> | Blog</title>
+  <title>【Tool】Git Basic in Practice | Blog</title>
   
 
 
@@ -311,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">【Tool】Git Basic in Practice</h1>
         
 
         <div class="post-meta">
@@ -359,10 +362,7 @@
       
 
       
-        <hr>
-<hr>
-<p>title: Git Basic in Practice<br>date: 2018-05-22 15:43:03</p>
-<h2 id="tags-Git"><a href="#tags-Git" class="headerlink" title="tags: Git"></a>tags: Git</h2><p><strong>Git</strong> is a distributed <a href="https://en.wikipedia.org/wiki/Version_control_system" title="Version control system" target="_blank" rel="noopener">version control system</a> for tracking changes in computer files and coordinating work on those files among multiple people.<br>Git has three main states that your files can reside in: committed, modified, and staged:</p>
+        <p><strong>Git</strong> is a distributed <a href="https://en.wikipedia.org/wiki/Version_control_system" title="Version control system" target="_blank" rel="noopener">version control system</a> for tracking changes in computer files and coordinating work on those files among multiple people.<br>Git has three main states that your files can reside in: committed, modified, and staged:</p>
 <ul>
 <li>Committed means that the data is safely stored in your local database.</li>
 <li>Modified means that you have changed the file but have not committed it to your database yet.</li>
@@ -381,14 +381,15 @@
 </li>
 </ol>
 <p>If you want to override this with a different name or email address for specific projects, you can run the command without the <code>--global</code> option when you’re in that project.</p>
-<p>##Git commands</p>
-<p>###Creating or cloning a Git repository<br>If you have a project directory that is currently not under version control and you want to start controlling it with Git, you first need to go to that project’s directory and type:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure></p>
+<h2 id="Git-commands"><a href="#Git-commands" class="headerlink" title="Git commands"></a>Git commands</h2><h3 id="Creating-or-cloning-a-Git-repository"><a href="#Creating-or-cloning-a-Git-repository" class="headerlink" title="Creating or cloning a Git repository"></a>Creating or cloning a Git repository</h3><p>If you have a project directory that is currently not under version control and you want to start controlling it with Git, you first need to go to that project’s directory and type:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure></p>
 <p>This creates a new subdirectory named <code>.git</code> that contains all of your necessary repository files — a Git repository skeleton. At this point, nothing in your project is tracked yet. If you want to start version-controlling existing files (as opposed to an empty directory), you should probably begin tracking those files and do an initial commit. You can accomplish that with a few <code>git add</code> commands.<br>If you want to get a copy of an existing Git repository — for example, a project you’d like to contribute to — the command you need is <code>git clone</code> like this:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/libgit2/libgit2</span><br></pre></td></tr></table></figure></p>
-<p>###Make Changes<br>If you have made changes in your profiles,you can list all new or modified files by typing:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure></p>
+<h3 id="Make-Changes"><a href="#Make-Changes" class="headerlink" title="Make Changes"></a>Make Changes</h3><p>If you have made changes in your profiles,you can list all new or modified files by typing:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure></p>
 <p>While the git status output is pretty comprehensive, it’s also quite wordy. Git also has a short status flag so you can see your changes in a more compact way. If you run <code>git status -s</code> or <code>git status --short</code><br>In order to begin tracking a new file, you use the command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add</span><br></pre></td></tr></table></figure></p>
 <p>To see what you’ve changed but not yet staged, type:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff</span><br></pre></td></tr></table></figure></p>
 <p>That command compares what is in your working directory with what is in your staging area. The result tells you the changes you’ve made that you haven’t yet staged.</p>
 <p>If you want to see what you’ve staged that will go into your next commit, you can use <code>git diff --staged</code>. This command compares your staged changes to your last commit.And  you can use <code>git diff --cached</code>to see what you’ve staged so far.</p>
+<h3 id="Group-Changes"><a href="#Group-Changes" class="headerlink" title="Group Changes"></a>Group Changes</h3><p>To List out all local branches in the current repository, you can run:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></table></figure></p>
+<p>If you want to create a new branch, you can use command <code>git branch [branch-name]</code>(command <code>git branch -d [branch-name]</code> for deleting), then use the command <code>git checkout [branch-name]</code>to switch to the specified branch and update the working directory.<br>Certainly,To create a new branch and switch to it at the same time, you can run:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b [branch-name]</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -403,6 +404,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Git/" rel="tag"># Git</a>
+          
+        </div>
       
 
       
@@ -511,6 +518,15 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
 
           </nav>
 
@@ -581,7 +597,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tags-Git"><span class="nav-text">tags: Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-Git"><span class="nav-text">Installing Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-configure-tooling"><span class="nav-text">Git configure tooling</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-Git"><span class="nav-text">Installing Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-configure-tooling"><span class="nav-text">Git configure tooling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-commands"><span class="nav-text">Git commands</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-or-cloning-a-Git-repository"><span class="nav-text">Creating or cloning a Git repository</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Make-Changes"><span class="nav-text">Make Changes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Group-Changes"><span class="nav-text">Group Changes</span></a></li></ol></li></ol></div>
             
 
           </div>
