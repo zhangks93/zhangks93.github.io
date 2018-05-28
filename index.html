@@ -84,7 +84,7 @@
 <meta property="og:description" content="Git is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people.Git has three main states that your files can reside in: c">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://git-scm.com/book/en/v2/images/areas.png">
-<meta property="og:updated_time" content="2018-05-26T05:59:44.000Z">
+<meta property="og:updated_time" content="2018-05-28T07:51:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Tool】Git Basic in Practice">
 <meta name="twitter:description" content="Git is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people.Git has three main states that your files can reside in: c">
@@ -395,6 +395,18 @@
 <p>If you want to see what you’ve staged that will go into your next commit, you can use <code>git diff --staged</code>. This command compares your staged changes to your last commit.And  you can use <code>git diff --cached</code>to see what you’ve staged so far.</p>
 <h3 id="Group-Changes"><a href="#Group-Changes" class="headerlink" title="Group Changes"></a>Group Changes</h3><p>To List out all local branches in the current repository, you can run:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></table></figure></p>
 <p>If you want to create a new branch, you can use command <code>git branch [branch-name]</code>(command <code>git branch -d [branch-name]</code> for deleting), then use the command <code>git checkout [branch-name]</code>to switch to the specified branch and update the working directory.<br>Certainly,To create a new branch and switch to it at the same time, you can run:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b [branch-name]</span><br></pre></td></tr></table></figure></p>
+<h3 id="Review-History"><a href="#Review-History" class="headerlink" title="Review History"></a>Review History</h3><p>To view the commit history of the current branch, you should use the command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></p>
+<p>Certainly, common options to <code>$ git log</code> helps you to output more freely like sql server. Options are listed in Table.1</p>
+<table border="1"><br>  <tr><br>    <th>Option</th><br>    <th>Description</th><br>  </tr><br>  <tr><br>    <td>–pretty=oneline</td><br>    <td>Print each commit on a single line</td><br>  </tr><br> <tr><br>    <td>–pretty=format:</td><br>    <td> Outputyour own log output format</td><br>  </tr><br><tr><br>    <td>–patch</td><br>    <td>Show the patch introduced with each commit.</td><br>  </tr><br><tr><br>    <td>–stat</td><br>    <td>Show statistics for files modified in each commit.</td><br>  </tr><br></table>
+
+
+
+
+
+
+
+
+
 
           
         
