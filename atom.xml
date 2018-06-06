@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-03T12:06:14.000Z</updated>
+  <updated>2018-06-06T07:03:52.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,16 @@
     <link href="http://yoursite.com/2018/06/03/git/"/>
     <id>http://yoursite.com/2018/06/03/git/</id>
     <published>2018-06-03T12:03:53.000Z</published>
-    <updated>2018-06-03T12:06:14.000Z</updated>
+    <updated>2018-06-06T07:03:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Working-with-remotes"><a href="#Working-with-remotes" class="headerlink" title="Working with remotes"></a>Working with remotes</h2><p>Note: Remote repositories can be on your local machine.It is entirely possible that you can be working with a “remote” repository that is, in fact, on the same host you are. The word “remote” does not necessarily imply that the repository is somewhere else on the network or Internet, only that it is elsewhere. Working with such a remote repository would still involve all the standard pushing, pulling and fetching operations as with any other remote.</p><h3 id="Showing-Your-Remotes"><a href="#Showing-Your-Remotes" class="headerlink" title="Showing Your Remotes"></a>Showing Your Remotes</h3><p>To see which remote servers you have configured, you can run:</p><pre><code class="bash">$ git remote</code></pre><p>You can also specify <code>-v</code>, which shows you the URLs that Git has stored for the shortname to be used when reading and writing to that remote.</p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Working-with-remotes&quot;&gt;&lt;a href=&quot;#Working-with-remotes&quot; class=&quot;headerlink&quot; title=&quot;Working with remotes&quot;&gt;&lt;/a&gt;Working with remotes&lt;/h2&gt;&lt;
+      
     
     </summary>
     
