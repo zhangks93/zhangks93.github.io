@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/11/14/MySQL-Basic/</loc>
+    
+    <lastmod>2018-11-13T22:03:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/11/14/MySQL-Advanced/</loc>
+    
+    <lastmod>2018-11-13T21:58:50.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/03/30/How-to-Write-a-Research-Proposal/</loc>
     
     <lastmod>2018-11-12T22:21:54.000Z</lastmod>
