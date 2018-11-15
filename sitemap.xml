@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/11/15/linux-shell-Basic/</loc>
+    
+    <lastmod>2018-11-15T05:22:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/11/14/MySQL-Basic/</loc>
     
-    <lastmod>2018-11-13T22:03:26.000Z</lastmod>
+    <lastmod>2018-11-15T05:17:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/06/03/git/</loc>
+    
+    <lastmod>2018-11-15T05:06:28.000Z</lastmod>
     
   </url>
   
@@ -33,13 +47,6 @@
     <loc>http://yoursite.com/2018/08/20/Networks/</loc>
     
     <lastmod>2018-08-20T04:48:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/06/03/git/</loc>
-    
-    <lastmod>2018-06-06T07:03:52.000Z</lastmod>
     
   </url>
   

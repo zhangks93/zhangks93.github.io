@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-13T22:03:26.000Z</updated>
+  <updated>2018-11-15T05:22:06.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,19 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>MySQL Basic</title>
-    <link href="http://yoursite.com/2018/11/14/MySQL-Basic/"/>
-    <id>http://yoursite.com/2018/11/14/MySQL-Basic/</id>
-    <published>2018-11-13T22:00:13.000Z</published>
-    <updated>2018-11-13T22:03:26.000Z</updated>
+    <title>[linux]shell Basic</title>
+    <link href="http://yoursite.com/2018/11/15/linux-shell-Basic/"/>
+    <id>http://yoursite.com/2018/11/15/linux-shell-Basic/</id>
+    <published>2018-11-15T05:18:23.000Z</published>
+    <updated>2018-11-15T05:22:06.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="SELECT"><a href="#SELECT" class="headerlink" title="SELECT"></a>SELECT</h2><pre><code class="bash">$ SELECT Column_Name FROM Table_Name</code></pre><pre><code class="bash">$ SELECT * FROM Table_Name</code></pre><pre><code class="bash">$ SELECT DISTINCT Column_Name FROM Table_Name</code></pre><pre><code class="bash">$ SELECT DISTINCT Column_Name FROM Table_Name</code></pre><pre><code class="bash">$ SELECT Column_Name FROM Table_Name LIMIT Number</code></pre><pre><code class="bash">$ SELECT Column_Name FROM Table_Name LIMIT Number</code></pre><pre><code class="bash">$ SELECT Function(Column_Name) FROM Table_Name </code></pre><ul><li>avg()</li><li>count()</li><li>first()</li><li>last()</li><li>max()</li><li>min()</li><li>sum()<h3 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h3><pre><code class="bash">$ SELECT Column_Name FROM Table_Name WHERE Condition</code></pre><table border="1"><br><tr><br>  <th>Option</th><br>  <th>Description</th><br></tr><br><tr><br>  <td>&gt;,&lt;,&gt;=,&lt;=</td><br>  <td>larger/smaller than a specific value</td><br></tr><br><tr><br>  <td>=,!=</td><br>  <td>equal or unequal to a specific value</td><br></tr><br><tr><br>  <td>BETWEEN</td><br>  <td>in a certain range</td><br></tr><br><tr><br>  <td>LIKE</td><br>  <td>search in a certain area, always combined with wildcard</td><br></tr><br></table><h3 id="Sort"><a href="#Sort" class="headerlink" title="Sort"></a>Sort</h3><pre><code class="bash">$ SELECT Column_Name FROM Table_Name ORDER BY Column_Name</code></pre><h3 id="Alias"><a href="#Alias" class="headerlink" title="Alias"></a>Alias</h3><pre><code class="bash">$ SELECT Column_Name AS Alias FROM Table_Name</code></pre><pre><code class="bash">$ SELECT Column_Name FROM Table_A_Name AS A JOIN Table_B_Name AS B</code></pre></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="View-Documents"><a href="#View-Documents" class="headerlink" title="View Documents"></a>View Documents</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/bin</span><br><span class="line"></span><br><span class="line">cd ./Documents</span><br><span class="line"></span><br><span class="line">cd ../Docunments</span><br><span class="line"></span><br><span class="line">pwd</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;SELECT&quot;&gt;&lt;a href=&quot;#SELECT&quot; class=&quot;headerlink&quot; title=&quot;SELECT&quot;&gt;&lt;/a&gt;SELECT&lt;/h2&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;$ SELECT Column_Name FROM Table_N
+        &lt;h2 id=&quot;View-Documents&quot;&gt;&lt;a href=&quot;#View-Documents&quot; class=&quot;headerlink&quot; title=&quot;View Documents&quot;&gt;&lt;/a&gt;View Documents&lt;/h2&gt;&lt;figure class=&quot;highlight 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>【SQL】 MySQL Basic</title>
+    <link href="http://yoursite.com/2018/11/14/MySQL-Basic/"/>
+    <id>http://yoursite.com/2018/11/14/MySQL-Basic/</id>
+    <published>2018-11-13T22:00:13.000Z</published>
+    <updated>2018-11-15T05:17:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="SELECT"><a href="#SELECT" class="headerlink" title="SELECT"></a>SELECT</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Column_Name <span class="keyword">FROM</span> Table_Name</span><br></pre></td></tr></table></figure><pre><code class="SQL"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> Table_Name</code></pre><pre><code class="SQL"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Column_Name <span class="keyword">FROM</span> Table_Name</code></pre><pre><code class="SQL"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Column_Name <span class="keyword">FROM</span> Table_Name</code></pre><pre><code class="SQL"><span class="keyword">SELECT</span> Column_Name <span class="keyword">FROM</span> Table_Name <span class="keyword">LIMIT</span> <span class="built_in">Number</span></code></pre><pre><code class="SQL"><span class="keyword">SELECT</span> Column_Name <span class="keyword">FROM</span> Table_Name <span class="keyword">LIMIT</span> <span class="built_in">Number</span></code></pre><pre><code class="SQL"><span class="keyword">SELECT</span> <span class="keyword">Function</span>(Column_Name) <span class="keyword">FROM</span> Table_Name </code></pre><ul><li>avg()</li><li>count()</li><li>first()</li><li>last()</li><li>max()</li><li>min()</li><li>sum()<h3 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h3><pre><code class="SQL"><span class="keyword">SELECT</span> Column_Name <span class="keyword">FROM</span> Table_Name <span class="keyword">WHERE</span> Condition</code></pre><table border="1"><br><tr><br>  <th>Option</th><br>  <th>Description</th><br></tr><br><tr><br>  <td>&gt;,&lt;,&gt;=,&lt;=</td><br>  <td>larger/smaller than a specific value</td><br></tr><br><tr><br>  <td>=,!=</td><br>  <td>equal or unequal to a specific value</td><br></tr><br><tr><br>  <td>BETWEEN</td><br>  <td>in a certain range</td><br></tr><br><tr><br>  <td>LIKE</td><br>  <td>search in a certain area, always combined with wildcard</td><br></tr><br></table><h3 id="Sort"><a href="#Sort" class="headerlink" title="Sort"></a>Sort</h3><pre><code class="SQL"><span class="keyword">SELECT</span> Column_Name <span class="keyword">FROM</span> Table_Name <span class="keyword">ORDER</span> <span class="keyword">BY</span> Column_Name</code></pre><h3 id="Alias"><a href="#Alias" class="headerlink" title="Alias"></a>Alias</h3><pre><code class="SQL"><span class="keyword">SELECT</span> Column_Name <span class="keyword">AS</span> <span class="keyword">Alias</span> <span class="keyword">FROM</span> Table_Name</code></pre><pre><code class="SQL"><span class="keyword">SELECT</span> Column_Name <span class="keyword">FROM</span> Table_A_Name <span class="keyword">AS</span> A <span class="keyword">JOIN</span> Table_B_Name <span class="keyword">AS</span> B</code></pre></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;SELECT&quot;&gt;&lt;a href=&quot;#SELECT&quot; class=&quot;headerlink&quot; title=&quot;SELECT&quot;&gt;&lt;/a&gt;SELECT&lt;/h2&gt;&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutte
       
     
     </summary>
@@ -86,9 +107,9 @@
     <link href="http://yoursite.com/2018/06/03/git/"/>
     <id>http://yoursite.com/2018/06/03/git/</id>
     <published>2018-06-03T12:03:53.000Z</published>
-    <updated>2018-06-06T07:03:52.000Z</updated>
+    <updated>2018-11-15T05:06:28.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Working-with-remotes"><a href="#Working-with-remotes" class="headerlink" title="Working with remotes"></a>Working with remotes</h2><p>Note: Remote repositories can be on your local machine.It is entirely possible that you can be working with a “remote” repository that is, in fact, on the same host you are. The word “remote” does not necessarily imply that the repository is somewhere else on the network or Internet, only that it is elsewhere. Working with such a remote repository would still involve all the standard pushing, pulling and fetching operations as with any other remote.</p><h3 id="Showing-Your-Remotes"><a href="#Showing-Your-Remotes" class="headerlink" title="Showing Your Remotes"></a>Showing Your Remotes</h3><p>To see which remote servers you have configured, you can run:</p><pre><code class="bash">$ git remote</code></pre><p>You can also specify <code>-v</code>, which shows you the URLs that Git has stored for the shortname to be used when reading and writing to that remote.</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Working-with-remotes"><a href="#Working-with-remotes" class="headerlink" title="Working with remotes"></a>Working with remotes</h2><p>Note: Remote repositories can be on your local machine.It is entirely possible that you can be working with a “remote” repository that is, in fact, on the same host you are. The word “remote” does not necessarily imply that the repository is somewhere else on the network or Internet, only that it is elsewhere. Working with such a remote repository would still involve all the standard pushing, pulling and fetching operations as with any other remote.</p><h3 id="Showing-Your-Remotes"><a href="#Showing-Your-Remotes" class="headerlink" title="Showing Your Remotes"></a>Showing Your Remotes</h3><p>To see which remote servers you have configured, you can run:</p><pre><code class="git">git remote</code></pre><p>You can also specify <code>-v</code>, which shows you the URLs that Git has stored for the shortname to be used when reading and writing to that remote.</p>]]></content>
     
     <summary type="html">
     
