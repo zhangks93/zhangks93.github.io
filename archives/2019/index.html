@@ -3,28 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>【Tool】 Git Basic in Practice (I) | Blog</title>
+  <title>Archives: 2019 | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="Git" />
   
   
   
-  
-  <meta name="description" content="Git is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people.Git has three main states that your files can reside in: c">
-<meta name="keywords" content="Git">
-<meta property="og:type" content="article">
-<meta property="og:title" content="【Tool】 Git Basic in Practice (I)">
-<meta property="og:url" content="http://yoursite.com/2018/05/22/operation/index.html">
+  <meta name="description" content="Zhejiang Unversity, China">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="Git is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people.Git has three main states that your files can reside in: c">
+<meta property="og:description" content="Zhejiang Unversity, China">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://git-scm.com/book/en/v2/images/areas.png">
-<meta property="og:updated_time" content="2018-06-03T12:06:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Tool】 Git Basic in Practice (I)">
-<meta name="twitter:description" content="Git is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people.Git has three main states that your files can reside in: c">
-<meta name="twitter:image" content="https://git-scm.com/book/en/v2/images/areas.png">
+<meta name="twitter:title" content="Blog">
+<meta name="twitter:description" content="Zhejiang Unversity, China">
   
     <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
   
@@ -57,7 +51,7 @@
 
 
 
-  <body data-spy="scroll" data-target="#toc" data-offset="50">
+  <body>
 
 
   
@@ -109,148 +103,252 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-operation" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
+          <section id="main">
+  <div class="archives-tags-wrap"><blockquote><span>There are 9 posts in total till now.</span></blockquote>
+
+
+
+
+
+	<!-- 分页显示 -->
+	
+	
+		
+		
+		  
+		  
+		  <section class="archives-wrap">
+		    <div class="archive-year-wrap">
+		      <h1><a href="/archives/2019" class="archive-year">2019</a></h1>
+		    </div>
+		    <div class="archives">
+		
+		<article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+
+      <a href="/2019/01/06/Data-Structure-Stack-Queue-and-linked-list/" class="archive-article-date">
+		  <time datetime="2019-01-06T10:59:22.000Z" itemprop="datePublished">Jan 06, 2019</time>
+	  </a>
+      
   
-    <h1 class="thumb" class="article-title" itemprop="name">
-      【Tool】 Git Basic in Practice (I)
+    <h1 class="thumb" itemprop="name">
+      <a class="archive-article-title" href="/2019/01/06/Data-Structure-Stack-Queue-and-linked-list/">[Data Structure]Stack,Queue and linked list</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/05/22/operation/" class="article-date">
-	  <time datetime="2018-05-22T07:43:03.000Z" itemprop="datePublished">May 22, 2018</time>
-	</a>
-
-       
-      
-	<span id="busuanzi_container_page_pv">
-	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-	</span>
-
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>Git</strong> is a distributed <a href="https://en.wikipedia.org/wiki/Version_control_system" title="Version control system" target="_blank" rel="noopener">version control system</a> for tracking changes in computer files and coordinating work on those files among multiple people.<br>Git has three main states that your files can reside in: committed, modified, and staged:</p>
-<ul>
-<li>Committed means that the data is safely stored in your local database.</li>
-<li>Modified means that you have changed the file but have not committed it to your database yet.</li>
-<li>Staged means that you have marked a modified file in its current version to go into your next commit snapshot.<br><img src="https://git-scm.com/book/en/v2/images/areas.png" alt=""><br>Figure 1. Working tree, staging area, and Git directory.<h2 id="Installing-Git"><a href="#Installing-Git" class="headerlink" title="Installing Git"></a>Installing Git</h2><ul>
-<li><strong>Installing on Windows</strong><br>The most official build is available for download on the Git website. Just go to <a href="http://git-scm.com/download/win" target="_blank" rel="noopener">http://git-scm.com/download/win</a> and the download will start automatically.</li>
-<li><strong>Installing on Linux (Ubuntu/Debain)</strong><br>If you’re on a Debian-based distribution, such as Ubuntu, try <code>apt</code>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get install git</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Git-configure-tooling"><a href="#Git-configure-tooling" class="headerlink" title="Git configure tooling"></a>Git configure tooling</h2><p>Git comes with a tool called git config that lets you get and set configuration variables that control all aspects of how Git looks and operates. These variables can be stored in three different places:</p>
-<ol>
-<li><code>/etc/gitconfig</code> file: Contains values applied to every user on the system and all their repositories. If you pass the option <code>--system</code> to git config, it reads and writes from this file specifically. (Because this is a system configuration file, you would need administrative or superuser privilege to make changes to it.)</li>
-<li><code>~/.gitconfig</code>or <code>~/.config/git/config</code> file: Values specific personally to you, the user. You can make Git read and write to this file specifically by passing the –global option.</li>
-<li>config file in the Git directory (that is, <code>.git/config</code>) of whatever repository you’re currently using: Specific to that single repository.<br>The first thing you should do when you install Git is to set your user name and email address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"John Doe"</span></span><br><span class="line">$ git config --global user.email johndoe@example.com</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>If you want to override this with a different name or email address for specific projects, you can run the command without the <code>--global</code> option when you’re in that project.</p>
-<h2 id="Git-commands"><a href="#Git-commands" class="headerlink" title="Git commands"></a>Git commands</h2><h3 id="Creating-or-cloning-a-Git-repository"><a href="#Creating-or-cloning-a-Git-repository" class="headerlink" title="Creating or cloning a Git repository"></a>Creating or cloning a Git repository</h3><p>If you have a project directory that is currently not under version control and you want to start controlling it with Git, you first need to go to that project’s directory and type:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure></p>
-<p>This creates a new subdirectory named <code>.git</code> that contains all of your necessary repository files — a Git repository skeleton. At this point, nothing in your project is tracked yet. If you want to start version-controlling existing files (as opposed to an empty directory), you should probably begin tracking those files and do an initial commit. You can accomplish that with a few <code>git add</code> commands.<br>If you want to get a copy of an existing Git repository — for example, a project you’d like to contribute to — the command you need is <code>git clone</code> like this:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/libgit2/libgit2</span><br></pre></td></tr></table></figure></p>
-<h3 id="Make-Changes"><a href="#Make-Changes" class="headerlink" title="Make Changes"></a>Make Changes</h3><p>If you have made changes in your profiles,you can list all new or modified files by typing:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure></p>
-<p>While the git status output is pretty comprehensive, it’s also quite wordy. Git also has a short status flag so you can see your changes in a more compact way. If you run <code>git status -s</code> or <code>git status --short</code><br>In order to begin tracking a new file, you use the command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add</span><br></pre></td></tr></table></figure></p>
-<p>To see what you’ve changed but not yet staged, type:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff</span><br></pre></td></tr></table></figure></p>
-<p>That command compares what is in your working directory with what is in your staging area. The result tells you the changes you’ve made that you haven’t yet staged.</p>
-<p>If you want to see what you’ve staged that will go into your next commit, you can use <code>git diff --staged</code>. This command compares your staged changes to your last commit.And  you can use <code>git diff --cached</code>to see what you’ve staged so far.</p>
-<h3 id="Group-Changes"><a href="#Group-Changes" class="headerlink" title="Group Changes"></a>Group Changes</h3><p>To List out all local branches in the current repository, you can run:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></table></figure></p>
-<p>If you want to create a new branch, you can use command <code>git branch [branch-name]</code>(command <code>git branch -d [branch-name]</code> for deleting), then use the command <code>git checkout [branch-name]</code>to switch to the specified branch and update the working directory.<br>Certainly,To create a new branch and switch to it at the same time, you can run:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b [branch-name]</span><br></pre></td></tr></table></figure></p>
-<h3 id="Review-History"><a href="#Review-History" class="headerlink" title="Review History"></a>Review History</h3><p>To view the commit history of the current branch, you should use the command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></p>
-<p>Certainly, common options to <code>$ git log</code> helps you to output more freely like sql server. Options are listed in Table.1</p>
-<table border="1"><br>  <tr><br>    <th>Option</th><br>    <th>Description</th><br>  </tr><br>  <tr><br>    <td>–pretty=oneline</td><br>    <td>Print each commit on a single line</td><br>  </tr><br> <tr><br>    <td>–pretty=format:</td><br>    <td> Outputyour own log output format</td><br>  </tr><br><tr><br>    <td>–patch</td><br>    <td>Show the patch introduced with each commit.</td><br>  </tr><br><tr><br>    <td>–stat</td><br>    <td>Show statistics for files modified in each commit.</td><br>  </tr><br></table>
-
-
-
-
-
-
-
-
-
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
-
-      
-        
-	<div id="comment">
-		<!-- 来必力City版安装代码 -->
-		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
-		<script type="text/javascript">
-		   (function(d, s) {
-		       var j, e = d.getElementsByTagName(s)[0];
-
-		       if (typeof LivereTower === 'function') { return; }
-
-		       j = d.createElement(s);
-		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-		       j.async = true;
-
-		       e.parentNode.insertBefore(j, e);
-		   })(document, 'script');
-		</script>
-		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-		</div>
-		<!-- City版安装代码已完成 -->
-	</div>
-
-
-
-      
-    </footer>
-    <hr class="entry-footer-hr">
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2018/06/03/git/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          【Tool】 Git Basic in Practice (II)
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/03/30/How-to-Write-a-Research-Proposal/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">How to Write a Research Proposal</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+	
+	
+		</div></section>
+	
 
-<!-- Table of Contents -->
+	<!-- 页数指示器 -->
+	
 
-  <aside id="sidebar">
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
-    
-      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-Git"><span class="nav-number">1.</span> <span class="nav-text">Installing Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-configure-tooling"><span class="nav-number">2.</span> <span class="nav-text">Git configure tooling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-commands"><span class="nav-number">3.</span> <span class="nav-text">Git commands</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-or-cloning-a-Git-repository"><span class="nav-number">3.1.</span> <span class="nav-text">Creating or cloning a Git repository</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Make-Changes"><span class="nav-number">3.2.</span> <span class="nav-text">Make Changes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Group-Changes"><span class="nav-number">3.3.</span> <span class="nav-text">Group Changes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-History"><span class="nav-number">3.4.</span> <span class="nav-text">Review History</span></a></li></ol></li></ol>
-    
-    </div>
-  </aside>
+
+
 </section>
+          <aside id="sidebar">
+  
+    <div style="margin: 20px 0;">
+	<div id="search-form-wrap">
+
+    <form class="search-form">
+        <label style="width: 72%;">
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field" style="height: 36px; width: 100%;" placeholder=" Search…" value="" name="s" title="Search for:">
+        </label>
+        <input type="submit" class="search-form-submit" value="Search">
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+</div>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Connect With Us</h3>
+    <div class="widget widget_athemes_social_icons">
+
+    	<ul class="clearfix widget-social-icons">   
+    	
+   			<li><a href="https://github.com/iTimeTraveler" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
+
+   		
+   			<li><a href="" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
+
+   		
+   			<li><a href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
+
+   		
+   		</ul>
+
+
+   		<!--
+   		<ul class="clearfix widget-social-icons">   		
+   		<li class="widget-si-twitter"><a href="http://twitter.com" title="Twitter"><i class="ico-twitter"></i></a></li> 
+		<li class="widget-si-facebook"><a href="http://facebook.com" title="Facebook"><i class="ico-facebook"></i></a></li>
+			<li class="widget-si-gplus"><a href="http://plus.google.com" title="Google+"><i class="ico-gplus"></i></a></li>
+			<li class="widget-si-pinterest"><a href="http://pinterest.com" title="Pinterest"><i class="ico-pinterest"></i></a></li>
+			<li class="widget-si-flickr"><a href="http://flickr.com" title="Flickr"><i class="ico-flickr"></i></a></li>
+			<li class="widget-si-instagram"><a href="http://instagram.com" title="Instagram"><i class="ico-instagram"></i></a></li>
+		</ul> -->
+
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget_athemes_tabs">
+    <ul id="widget-tab" class="clearfix widget-tab-nav">
+      <li class="active"><a>Recent Posts</a></li>
+    </ul>
+    <div class="widget">
+      <ul>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2019/01/06/Data-Structure-Stack-Queue-and-linked-list/">[Data Structure]Stack,Queue and linked list</a></h6>
+              <span>January 6, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2018/11/15/linux-shell-Basic/">[linux]shell Basic</a></h6>
+              <span>November 15, 2018</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2018/11/14/MySQL-Basic/">【SQL】 MySQL Basic</a></h6>
+              <span>November 14, 2018</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2018/11/14/MySQL-Advanced/">MySQL Advanced</a></h6>
+              <span>November 14, 2018</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2018/08/20/Regression-1/">Regression</a></h6>
+              <span>August 20, 2018</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2018/08/20/Networks/">Networks&#39;</a></h6>
+              <span>August 20, 2018</span>
+            </div>
+
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Acedemy/">Acedemy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Acedemy/" style="font-size: 10px;">Acedemy</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
         
       </div>
 

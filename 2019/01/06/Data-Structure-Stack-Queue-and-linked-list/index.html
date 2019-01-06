@@ -3,28 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>【Tool】 Git Basic in Practice (I) | Blog</title>
+  <title>[Data Structure]Stack,Queue and linked list | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="Git" />
   
   
   
-  
-  <meta name="description" content="Git is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people.Git has three main states that your files can reside in: c">
-<meta name="keywords" content="Git">
+  <meta name="description" content="StackA stack (sometimes called a “push-down stack”) is an ordered collection of items where the addition of new items and the removal of existing items always takes place at the same end. This end is">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Tool】 Git Basic in Practice (I)">
-<meta property="og:url" content="http://yoursite.com/2018/05/22/operation/index.html">
+<meta property="og:title" content="[Data Structure]Stack,Queue and linked list">
+<meta property="og:url" content="http://yoursite.com/2019/01/06/Data-Structure-Stack-Queue-and-linked-list/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="Git is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people.Git has three main states that your files can reside in: c">
+<meta property="og:description" content="StackA stack (sometimes called a “push-down stack”) is an ordered collection of items where the addition of new items and the removal of existing items always takes place at the same end. This end is">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://git-scm.com/book/en/v2/images/areas.png">
-<meta property="og:updated_time" content="2018-06-03T12:06:22.000Z">
+<meta property="og:updated_time" content="2019-01-06T11:06:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Tool】 Git Basic in Practice (I)">
-<meta name="twitter:description" content="Git is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people.Git has three main states that your files can reside in: c">
-<meta name="twitter:image" content="https://git-scm.com/book/en/v2/images/areas.png">
+<meta name="twitter:title" content="[Data Structure]Stack,Queue and linked list">
+<meta name="twitter:description" content="StackA stack (sometimes called a “push-down stack”) is an ordered collection of items where the addition of new items and the removal of existing items always takes place at the same end. This end is">
   
     <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
   
@@ -109,7 +104,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-operation" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-Data-Structure-Stack-Queue-and-linked-list" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -117,7 +112,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      【Tool】 Git Basic in Practice (I)
+      [Data Structure]Stack,Queue and linked list
     </h1>
   
 
@@ -125,8 +120,8 @@
     
     <div class="article-meta">
       
-	<a href="/2018/05/22/operation/" class="article-date">
-	  <time datetime="2018-05-22T07:43:03.000Z" itemprop="datePublished">May 22, 2018</time>
+	<a href="/2019/01/06/Data-Structure-Stack-Queue-and-linked-list/" class="article-date">
+	  <time datetime="2019-01-06T10:59:22.000Z" itemprop="datePublished">January 6, 2019</time>
 	</a>
 
        
@@ -138,55 +133,40 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>Git</strong> is a distributed <a href="https://en.wikipedia.org/wiki/Version_control_system" title="Version control system" target="_blank" rel="noopener">version control system</a> for tracking changes in computer files and coordinating work on those files among multiple people.<br>Git has three main states that your files can reside in: committed, modified, and staged:</p>
-<ul>
-<li>Committed means that the data is safely stored in your local database.</li>
-<li>Modified means that you have changed the file but have not committed it to your database yet.</li>
-<li>Staged means that you have marked a modified file in its current version to go into your next commit snapshot.<br><img src="https://git-scm.com/book/en/v2/images/areas.png" alt=""><br>Figure 1. Working tree, staging area, and Git directory.<h2 id="Installing-Git"><a href="#Installing-Git" class="headerlink" title="Installing Git"></a>Installing Git</h2><ul>
-<li><strong>Installing on Windows</strong><br>The most official build is available for download on the Git website. Just go to <a href="http://git-scm.com/download/win" target="_blank" rel="noopener">http://git-scm.com/download/win</a> and the download will start automatically.</li>
-<li><strong>Installing on Linux (Ubuntu/Debain)</strong><br>If you’re on a Debian-based distribution, such as Ubuntu, try <code>apt</code>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get install git</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Git-configure-tooling"><a href="#Git-configure-tooling" class="headerlink" title="Git configure tooling"></a>Git configure tooling</h2><p>Git comes with a tool called git config that lets you get and set configuration variables that control all aspects of how Git looks and operates. These variables can be stored in three different places:</p>
-<ol>
-<li><code>/etc/gitconfig</code> file: Contains values applied to every user on the system and all their repositories. If you pass the option <code>--system</code> to git config, it reads and writes from this file specifically. (Because this is a system configuration file, you would need administrative or superuser privilege to make changes to it.)</li>
-<li><code>~/.gitconfig</code>or <code>~/.config/git/config</code> file: Values specific personally to you, the user. You can make Git read and write to this file specifically by passing the –global option.</li>
-<li>config file in the Git directory (that is, <code>.git/config</code>) of whatever repository you’re currently using: Specific to that single repository.<br>The first thing you should do when you install Git is to set your user name and email address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"John Doe"</span></span><br><span class="line">$ git config --global user.email johndoe@example.com</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>If you want to override this with a different name or email address for specific projects, you can run the command without the <code>--global</code> option when you’re in that project.</p>
-<h2 id="Git-commands"><a href="#Git-commands" class="headerlink" title="Git commands"></a>Git commands</h2><h3 id="Creating-or-cloning-a-Git-repository"><a href="#Creating-or-cloning-a-Git-repository" class="headerlink" title="Creating or cloning a Git repository"></a>Creating or cloning a Git repository</h3><p>If you have a project directory that is currently not under version control and you want to start controlling it with Git, you first need to go to that project’s directory and type:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure></p>
-<p>This creates a new subdirectory named <code>.git</code> that contains all of your necessary repository files — a Git repository skeleton. At this point, nothing in your project is tracked yet. If you want to start version-controlling existing files (as opposed to an empty directory), you should probably begin tracking those files and do an initial commit. You can accomplish that with a few <code>git add</code> commands.<br>If you want to get a copy of an existing Git repository — for example, a project you’d like to contribute to — the command you need is <code>git clone</code> like this:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/libgit2/libgit2</span><br></pre></td></tr></table></figure></p>
-<h3 id="Make-Changes"><a href="#Make-Changes" class="headerlink" title="Make Changes"></a>Make Changes</h3><p>If you have made changes in your profiles,you can list all new or modified files by typing:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure></p>
-<p>While the git status output is pretty comprehensive, it’s also quite wordy. Git also has a short status flag so you can see your changes in a more compact way. If you run <code>git status -s</code> or <code>git status --short</code><br>In order to begin tracking a new file, you use the command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add</span><br></pre></td></tr></table></figure></p>
-<p>To see what you’ve changed but not yet staged, type:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff</span><br></pre></td></tr></table></figure></p>
-<p>That command compares what is in your working directory with what is in your staging area. The result tells you the changes you’ve made that you haven’t yet staged.</p>
-<p>If you want to see what you’ve staged that will go into your next commit, you can use <code>git diff --staged</code>. This command compares your staged changes to your last commit.And  you can use <code>git diff --cached</code>to see what you’ve staged so far.</p>
-<h3 id="Group-Changes"><a href="#Group-Changes" class="headerlink" title="Group Changes"></a>Group Changes</h3><p>To List out all local branches in the current repository, you can run:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></table></figure></p>
-<p>If you want to create a new branch, you can use command <code>git branch [branch-name]</code>(command <code>git branch -d [branch-name]</code> for deleting), then use the command <code>git checkout [branch-name]</code>to switch to the specified branch and update the working directory.<br>Certainly,To create a new branch and switch to it at the same time, you can run:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b [branch-name]</span><br></pre></td></tr></table></figure></p>
-<h3 id="Review-History"><a href="#Review-History" class="headerlink" title="Review History"></a>Review History</h3><p>To view the commit history of the current branch, you should use the command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></p>
-<p>Certainly, common options to <code>$ git log</code> helps you to output more freely like sql server. Options are listed in Table.1</p>
-<table border="1"><br>  <tr><br>    <th>Option</th><br>    <th>Description</th><br>  </tr><br>  <tr><br>    <td>–pretty=oneline</td><br>    <td>Print each commit on a single line</td><br>  </tr><br> <tr><br>    <td>–pretty=format:</td><br>    <td> Outputyour own log output format</td><br>  </tr><br><tr><br>    <td>–patch</td><br>    <td>Show the patch introduced with each commit.</td><br>  </tr><br><tr><br>    <td>–stat</td><br>    <td>Show statistics for files modified in each commit.</td><br>  </tr><br></table>
-
-
-
-
-
-
-
-
-
-
+        <h2 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h2><p>A stack (sometimes called a “push-down stack”) is an ordered collection of items where the addition of new items and the removal of existing items always takes place at the same end. This end is commonly referred to as the “top.” The end opposite the top is known as the “base.”</p>
+<p>The base of the stack is significant since items stored in the stack that are closer to the base represent those that have been in the stack the longest. The most recently added item is the one that is in position to be removed first. This ordering principle is sometimes called LIFO, last-in first-out. It provides an ordering based on length of time in the collection. Newer items are near the top, while older items are near the base.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Dec_to_Bin</span><span class="params">(nums)</span>:</span></span><br><span class="line">    result=[]</span><br><span class="line">    <span class="keyword">while</span> nums!=<span class="number">0</span>:</span><br><span class="line">        result.insert(len(result)+<span class="number">1</span>,nums%<span class="number">2</span>)</span><br><span class="line">        nums=nums//<span class="number">2</span></span><br><span class="line">    binString = <span class="string">""</span></span><br><span class="line">    <span class="keyword">while</span> len(result)&gt;<span class="number">0</span>:</span><br><span class="line">        binString = binString + str(result.pop())</span><br><span class="line">   </span><br><span class="line">    <span class="keyword">return</span> int(binString)</span><br><span class="line">print(Dec_to_Bin(<span class="number">99</span>))</span><br><span class="line">print(Dec_to_Bin(<span class="number">37</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>1100011
+100101
+</code></pre><h2 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h2><p>A queue is an ordered collection of items where the addition of new items happens at one end, called the “rear,” and the removal of existing items occurs at the other end, commonly called the “front.” As an element enters the queue it starts at the rear and makes its way toward the front, waiting until that time when it is the next element to be removed.</p>
+<p>The most recently added item in the queue must wait at the end of the collection. The item that has been in the collection the longest is at the front. This ordering principle is sometimes called FIFO, first-in first-out. It is also known as “first-come first-served.”</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Queue</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.list=[]</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">enqueue</span><span class="params">(self,name)</span>:</span></span><br><span class="line">        self.list.insert(<span class="number">0</span>,name)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dequeue</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.list.pop()</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">size</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> len(self.list)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">judge</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> len(self.list)&gt;<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,time)</span>:</span></span><br><span class="line">        self.timestamp = time</span><br><span class="line">        self.pages = random.randrange(<span class="number">1</span>,<span class="number">21</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getStamp</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.timestamp</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getPages</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.pages</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">waitTime</span><span class="params">(self, currenttime)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> currenttime - self.timestamp</span><br><span class="line">    </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Printer</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, ppm)</span>:</span></span><br><span class="line">        self.pagerate = ppm</span><br><span class="line">        self.currentTask = <span class="keyword">None</span></span><br><span class="line">        self.timeRemaining = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">tick</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.currentTask != <span class="keyword">None</span>:</span><br><span class="line">            self.timeRemaining = self.timeRemaining - <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> self.timeRemaining &lt;= <span class="number">0</span>:</span><br><span class="line">                self.currentTask = <span class="keyword">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">busy</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.currentTask != <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">startNext</span><span class="params">(self,newtask)</span>:</span></span><br><span class="line">        self.currentTask = newtask</span><br><span class="line">        self.timeRemaining = newtask.getPages() * <span class="number">60</span>/self.pagerate</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">newPrintTask</span><span class="params">()</span>:</span></span><br><span class="line">    num = random.randrange(<span class="number">1</span>,<span class="number">181</span>)</span><br><span class="line">    <span class="keyword">if</span> num == <span class="number">180</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">20</span>):</span><br><span class="line">        pagesPerMinute=<span class="number">7</span></span><br><span class="line">        labprinter = Printer(pagesPerMinute)</span><br><span class="line">        printQueue = Queue()</span><br><span class="line">        waitingtimes = []</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> currentSecond <span class="keyword">in</span> range(<span class="number">7200</span>):</span><br><span class="line"></span><br><span class="line">              <span class="keyword">if</span> newPrintTask():</span><br><span class="line">                     task = Task(currentSecond)</span><br><span class="line">                     printQueue.enqueue(task)</span><br><span class="line"></span><br><span class="line">              <span class="keyword">if</span> (<span class="keyword">not</span> labprinter.busy()) <span class="keyword">and</span> (printQueue.judge()):</span><br><span class="line">                    nexttask = printQueue.dequeue()</span><br><span class="line">                    waitingtimes.append( nexttask.waitTime(currentSecond))</span><br><span class="line">                    labprinter.startNext(nexttask)</span><br><span class="line"></span><br><span class="line">              labprinter.tick()</span><br><span class="line"></span><br><span class="line">        averageWait=sum(waitingtimes)/len(waitingtimes)</span><br><span class="line">        print(<span class="string">"Average Wait %6.2f secs %3d tasks remaining."</span>%(averageWait,printQueue.size()))</span><br></pre></td></tr></table></figure>
+<pre><code>Average Wait  59.57 secs   0 tasks remaining.
+Average Wait  65.32 secs   0 tasks remaining.
+Average Wait  33.77 secs   0 tasks remaining.
+Average Wait  45.81 secs   0 tasks remaining.
+Average Wait  16.58 secs   0 tasks remaining.
+Average Wait  46.65 secs   0 tasks remaining.
+Average Wait 132.59 secs   1 tasks remaining.
+Average Wait  36.56 secs   0 tasks remaining.
+Average Wait  65.07 secs   0 tasks remaining.
+Average Wait  66.28 secs   0 tasks remaining.
+Average Wait  31.38 secs   1 tasks remaining.
+Average Wait  71.24 secs   0 tasks remaining.
+Average Wait  28.50 secs   0 tasks remaining.
+Average Wait  29.76 secs   0 tasks remaining.
+Average Wait  27.44 secs   0 tasks remaining.
+Average Wait  16.71 secs   0 tasks remaining.
+Average Wait  21.87 secs   0 tasks remaining.
+Average Wait  36.16 secs   0 tasks remaining.
+Average Wait  25.22 secs   0 tasks remaining.
+Average Wait  69.79 secs   0 tasks remaining.
+</code></pre>
       
     </div>
     <footer class="entry-meta entry-footer">
       
       
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
-
       
         
 	<div id="comment">
@@ -220,19 +200,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/06/03/git/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          【Tool】 Git Basic in Practice (II)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/03/30/How-to-Write-a-Research-Proposal/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/11/15/linux-shell-Basic/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">How to Write a Research Proposal</div>
+      <div class="article-nav-title">[linux]shell Basic</div>
     </a>
   
 </nav>
@@ -246,7 +217,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-Git"><span class="nav-number">1.</span> <span class="nav-text">Installing Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-configure-tooling"><span class="nav-number">2.</span> <span class="nav-text">Git configure tooling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-commands"><span class="nav-number">3.</span> <span class="nav-text">Git commands</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-or-cloning-a-Git-repository"><span class="nav-number">3.1.</span> <span class="nav-text">Creating or cloning a Git repository</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Make-Changes"><span class="nav-number">3.2.</span> <span class="nav-text">Make Changes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Group-Changes"><span class="nav-number">3.3.</span> <span class="nav-text">Group Changes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Review-History"><span class="nav-number">3.4.</span> <span class="nav-text">Review History</span></a></li></ol></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Stack"><span class="nav-number">1.</span> <span class="nav-text">Stack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Queue"><span class="nav-number">2.</span> <span class="nav-text">Queue</span></a></li></ol>
     
     </div>
   </aside>
