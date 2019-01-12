@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Kang&#39;s">
 <meta property="og:description" content="I’m studying Zhejiang University, Hangzhou, China. I’m really absorbed in the beauty of mathematics and firmly believe that the computation capability which has been advancing every second will promot">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-10T12:49:10.000Z">
+<meta property="og:updated_time" content="2019-01-12T07:34:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ABOUT ME">
 <meta name="twitter:description" content="I’m studying Zhejiang University, Hangzhou, China. I’m really absorbed in the beauty of mathematics and firmly believe that the computation capability which has been advancing every second will promot">
@@ -60,10 +60,32 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src="">
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
+
+
 
 
 <header id="allheader" class="site-header" role="banner" 
-   >
+   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -139,7 +161,7 @@
 <p>I’m really absorbed in the beauty of mathematics and firmly believe that the computation capability which has been advancing every second will promote the applications of abstract math in our daily life. So I share a optimistic attitude towards the permeation of techniques related to artificial intelligence into every walk of our life.</p>
 <p>My graduation thesis is related applications of neural networks and reinforcament learning in wastewater treatment. I have learned some basic consepts and skills about coding and program design since 2017. The opening of my tech Blog is linked to my purpose of sharing my feelings,experience and summaries with other friends, and also, it is really perfect alternative of notes since I can check and present to others whereever I go.</p>
 <ul>
-<li><p>For more detials about my project expericence and academic background, please check:</p>
+<li><p>For more detials about my project expericence and academic background, please check:<a href="CV.html">My Resume</a></p>
 </li>
 <li><p>Do be hesitated to contact me if any questions, my e-mail:<a href="mailto:zhangks93@outlook.com" target="_blank" rel="noopener">zhangks93@outlook.com</a><br>and this is my github:<a href="https://github.com/zhangks93" target="_blank" rel="noopener">https://github.com/zhangks93</a>  Feel free to fork or comment.</p>
 </li>
@@ -373,6 +395,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>

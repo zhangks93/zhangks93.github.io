@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Curriculum Vitae</title>
+<style type="text/css">
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+border:0;
+font:inherit;
+font-size:100%;
+margin:0;
+padding:0;
+vertical-align:baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+display:block;
+}
+
+html, body {background: #181818; font-family: 'Times New Roman', helvetica, arial, sans-serif; font-size: 15px; color: #222;}
+
+.clear {clear: both;}
+
+p {
+	font-size: 1em;
+	line-height: 1.4em;
+	margin-bottom: 20px;
+	color: #444;
+}
+
+#cv {
+	width: 90%;
+	max-width: 800px;
+	height: 1131px;
+	background: #f3f3f3;
+	margin: 30px auto;
+}
+
+.mainDetails {
+	padding: 20px 50px 10px 50px;
+	border-bottom: 2px solid #cf8a05;
+	background: #ededed;
+}
+
+#name h1 {
+	font-size: 2.5em;
+	font-weight: 700;
+	font-family: 'Times New Roman', Helvetica, Arial, sans-serif;
+	margin-bottom: -6px;
+}
+
+#name h2 {
+	font-size: 1.6em;
+	margin-left: 2px;
+	font-family: 'Times New Roman', Helvetica, Arial, sans-serif;
+}
+
+#mainArea {
+	padding: 0 50px;
+}
+
+#headshot {
+	width: 12.5%;
+	float: left;
+	margin-right: 30px;
+}
+
+#headshot img {
+	width: 100%;
+	height: auto;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+#name {
+	float: left;
+}
+
+#contactDetails {
+	float: right;
+    padding: 38px 0px 5px 5px;
+}
+
+#contactDetails ul {
+	list-style-type: none;
+	font-size: 12;
+	margin-top: 5px;
+}
+
+#contactDetails ul li {
+	margin-bottom: 0px;
+	color: #444;    text-align:right;
+}
+
+
+section {
+	border-top: 1px solid #dedede;
+	padding: 10px 0 0;
+}
+
+section:first-child {
+	border-top: 0;
+}
+
+section:last-child {
+	padding: 10px 0 5px;
+}
+
+.sectionTitle {
+	float: left;
+	width: 15%;
+}
+
+.sectionContent {
+	float: right;
+	width: 80%;
+}
+#subDetails {
+	float: right;
+    padding: 0px 0px 0px 5px;
+}
+.sectionTitle h2 {
+	font-family: 'Times New Roman';
+	
+	font-weight:bold;
+	font-size: 18px;
+	color: #cf8a05;
+}
+
+.sectionContent h2 {
+	font-family: 'Times New Roman';
+	font-size: 18px;
+	font-weight:bold;
+	margin-bottom: -2px;
+    float:left
+}
+.sectionContent h3 {
+	font-family: 'Times New Roman';
+	font-size: 15px;
+	font-weight:bold;
+	
+    float:right
+}
+.sectionContent ul li {
+	margin-bottom: 3px;
+	line-height:18px
+}
+.subDetails {
+	font-size: 0.8em;
+	font-style: italic;
+	margin-bottom: 3px;
+}
+
+.keySkills {
+	list-style-type: none;
+	-moz-column-count:3;
+	-webkit-column-count:3;
+	column-count:3;
+	margin-bottom: 20px;
+	font-size: 1em;
+	color: #444;
+}
+
+.keySkills ul li {
+	margin-bottom: 3px;
+}
+
+@media all and (min-width: 602px) and (max-width: 800px) {
+	#headshot {
+		display: none;
+	}
+	
+	.keySkills {
+	-moz-column-count:2;
+	-webkit-column-count:2;
+	column-count:2;
+	}
+}
+
+@media all and (max-width: 601px) {
+	#cv {
+		width: 95%;
+		margin: 10px auto;
+		min-width: 280px;
+	}
+	
+	#headshot {
+		display: none;
+	}
+	
+	#name, #contactDetails {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+	
+	.sectionTitle, .sectionContent {
+		float: none;
+		width: 100%;
+	}
+	
+	.sectionTitle {
+		margin-left: -2px;
+		font-size: 1.25em;
+	}
+	
+	.keySkills {
+		-moz-column-count:2;
+		-webkit-column-count:2;
+		column-count:2;
+	}
+}
+
+@media all and (max-width: 480px) {
+	.mainDetails {
+		padding: 15px 15px;
+	}
+	
+	section {
+		padding: 15px 0 0;
+	}
+	
+	#mainArea {
+		padding: 0 45px;
+	}
+
+	
+	.keySkills {
+	-moz-column-count:1;
+	-webkit-column-count:1;
+	column-count:1;
+	}
+	
+	#name h1 {
+		line-height: .8em;
+		margin-bottom: 4px;
+	}
+}
+
+@media print {
+    #cv {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes reset {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes reset {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes reset {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+</style>
+
+</head>
+
+<body id="top">
+<div id="cv" >
+
+	<div style="padding: 20px 50px 0px 50px;border-bottom: 2px solid #cf8a05;background: #ededed;">
+		<div id="headshot" >
+			<img src="headshot.jpg" alt="Kanghu" />
+		</div>
+		
+		<div id="name">
+			<h1 style="line-height:50px">Kangshu Zhang</h1>
+			<h2 style="line-height:30px">Data engineer</h2>
+			<h2 style="line-height:30px">Data scientist</h2>
+		</div>
+		
+		<div id="contactDetails" class="quickFade delayFour" style="line-height:20px">
+			<ul>
+				<li>E-mail:<a href="mailto:zhangks93@outlook.com" target="_blank">zhangks93@outlook.com</a></li>
+				<li>Mobile: +86-188-6811-5590</li>
+				<li>Blog: <a href="https://zhangks93.github.io">zhangks93.github.io</a></li>
+				
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+	<div id="mainArea">
+		<section>
+			<div class="sectionTitle">
+				<h2>EDUCATION</h2>
+			</div>
+			
+			<div class="sectionContent">
+				<article>
+					
+					<div style="float:left;width:49%"><h2>Zhejiang University</h2></div>
+					<div style="float:right;width:49%;text-align:right"><h3>Sep 2016 - Present</h3></div>
+					
+					
+					<div style="padding:7px 0px 1px 0px;clear:both;float:left ;width:55%">
+					<ul >
+                    <li>SCI Paper *3</li>
+					<li>Copyright of computer software *1</li>
+					<li>Triple-A Student and Outstanding Graduates of Zhejiang University</li>
+					</ul>
+					</div>
+					<div style="padding:7px 0px 1px 0px;float:right ;width:44%">
+					<ul >
+                    <li>Vice president of Student Union</li>
+					<li>Core participant of National Critical Project for Science and Technology on Water Pollution Prevention and Control</li>
+					</ul>
+					</div>
+					
+				</article>
+				<article>
+					
+					<div style="float:left;padding:3px 0px 0px 0px;width:75%"><h2>Huazhong University of Science and Technology</h2></div>
+					<div style="float:right;width:24%;text-align:right"><h3>Sep 2012 - Jun 2016</h3></div>
+					
+					<div style="padding:7px 0px 1px 0px;clear:both;float:left ;width:55%">
+					<ul >
+                    <li>GPA:87.7 (Top 10%)</li>
+					<li>National Endevor Scholarship (2013; 2014)</li>
+					<li>Triple-A Student and Outstanding Graduates of Zhejiang University</li>
+					</ul>
+					</div>
+					<div style="padding:7px 0px 1px 0px;float:right ;width:44%">
+					<ul >
+                    <li>Director of Student Funding Committee
+                    Administrate around 500 students' voluntary works and student employment program; founder of the volunteer teaching activities called 'hand-in-hand'</li>
+					<li>Class monitor (2016)</li>
+					</ul>
+					</div>
+				</article>
+				
+			</div>
+			<div class="clear"></div>
+		</section>
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h2>CORE SKILLS</h2>
+				</div>
+				
+				<div class="sectionContent">
+                    <ul >
+                    <li>English: TOEFL (R24+L27+S20+W22); GRE (319); CET-6 (578)</li>
+					<li>Programming: Python; C++; SQL; Linux shell</li>
+					<li>Tools: Jupyter notebook; Git; Docker</li>
+					<li>Experience with statistical data analysis(linear model, multivariate analysis), machine learning and deep learning(neural networks)</li>
+            </ul>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+		
+		
+		<section>
+			<div class="sectionTitle">
+				<h2>PROJECT EXPERIENCE</h2>
+			</div>
+			
+			<div class="sectionContent">
+				<article>
+					<div style="float:left;width:49%"><h2>AQUA STUDIO</h2></div>
+					<div style="float:right;width:49%;text-align:right">Developed independently</div>
+                    <div style="float:left;padding:7px 0px 0px 0px"><ul>
+                    <li>Frameworks and Libraries:Django, Keras, Bokeh, Pandas, SemanticUI</li>
+                    <li>Description:Intelligent monitoring and early warning system for wastewater treatment facility. This application has been embed in the demonstration project attached Critical Project for Science and Technology on Water Pollution Prevention and Control. </li>
+                    </ul></div>
+				</article>
+				<article>
+					<div style="float:left;width:49%;padding:4px 0px 0px 0px"><h2>EASY ANALYTICS</h2></div>
+					<div style="float:right;width:49%;text-align:right">Developed independently</div>
+                    <div style="float:left;padding:7px 0px 0px 0px"><ul>
+                    <li>Frameworks and Libraries:Django, Keras, Bokeh, Pandas, SemanticUI</li>
+                    <li>Description:Intelligent monitoring and early warning system for wastewater.</li>
+                    </ul></div>
+				</article>
+				<article>
+					<div style="float:left;width:59%;padding:4px 0px 0px 0px"><h2>BSM SIMULATION PLATFORM</h2></div>
+					<div style="float:right;width:40%;text-align:right">Developed independently</div>
+                    <div style="float:left;padding:7px 0px 0px 0px"><ul>
+                    <li>Frameworks and Libraries:Numpy, Pandas, Seaborn, Statsmodel</li>
+                    <li>Description:Simulation platform for activated sludge model.</li>
+                    </ul></div>
+				</article>
+				
+			</div>
+			<div class="clear"></div>
+		</section>
+		
+		
+		<section>
+			<div class="sectionTitle">
+				<h2>PERSONAL PROFILE</h2>
+			</div>
+			
+			<div class="sectionContent">
+				 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor metus, interdum at scelerisque in, porta at lacus. Maecenas dapibus luctus cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+			</div>
+			<div class="clear"></div>
+		</section>
+		
+		
+		
+		
+	</div>
+</div>
+
+</body>
+</html>
