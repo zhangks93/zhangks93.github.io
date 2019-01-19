@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>【Tool】 Git Basic in Practice (I) | Kang&#39;s</title>
+  <title>Git Basic in Practice (I) | Kang&#39;s</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Sometimes Coder;Sometimes Painter" />
@@ -16,15 +16,15 @@
   <meta name="description" content="Git is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people.Git has three main states that your files can reside in: c">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Tool】 Git Basic in Practice (I)">
+<meta property="og:title" content="Git Basic in Practice (I)">
 <meta property="og:url" content="http://yoursite.com/2018/05/22/operation/index.html">
 <meta property="og:site_name" content="Kang&#39;s">
 <meta property="og:description" content="Git is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people.Git has three main states that your files can reside in: c">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://git-scm.com/book/en/v2/images/areas.png">
-<meta property="og:updated_time" content="2018-06-03T12:06:22.000Z">
+<meta property="og:updated_time" content="2019-01-18T22:49:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Tool】 Git Basic in Practice (I)">
+<meta name="twitter:title" content="Git Basic in Practice (I)">
 <meta name="twitter:description" content="Git is a distributed version control system for tracking changes in computer files and coordinating work on those files among multiple people.Git has three main states that your files can reside in: c">
 <meta name="twitter:image" content="https://git-scm.com/book/en/v2/images/areas.png">
   
@@ -63,32 +63,10 @@
 
 
   
-  
-  <div class="site-header-image">
-    <img id="originBg" width="100%" alt="Hike News" src="">
-  </div>
-
-  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
-    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
-  </div>
-
-  <script>
-        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
-        var random = Math.floor((Math.random() * imgUrls.length ));
-        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
-          document.getElementById("originBg").src=imgUrls[random];
-          document.getElementById("blurBg").src=imgUrls[random];
-        } else {
-          document.getElementById("originBg").src='/' + imgUrls[random];
-          document.getElementById("blurBg").src='/' + imgUrls[random];
-        }
-    </script>
-
-
 
 
 <header id="allheader" class="site-header" role="banner" 
-   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
+   >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -143,7 +121,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      【Tool】 Git Basic in Practice (I)
+      Git Basic in Practice (I)
     </h1>
   
 
@@ -155,7 +133,10 @@
 	  <time datetime="2018-05-22T07:43:03.000Z" itemprop="datePublished">May 22, 2018</time>
 	</a>
 
-       
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Tool/">Tool</a>
+ 
       
 	<span id="busuanzi_container_page_pv">
 	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
@@ -168,7 +149,8 @@
 <ul>
 <li>Committed means that the data is safely stored in your local database.</li>
 <li>Modified means that you have changed the file but have not committed it to your database yet.</li>
-<li>Staged means that you have marked a modified file in its current version to go into your next commit snapshot.<br><img src="https://git-scm.com/book/en/v2/images/areas.png" alt=""><br>Figure 1. Working tree, staging area, and Git directory.<h2 id="Installing-Git"><a href="#Installing-Git" class="headerlink" title="Installing Git"></a>Installing Git</h2><ul>
+<li>Staged means that you have marked a modified file in its current version to go into your next commit snapshot.<br><img src="https://git-scm.com/book/en/v2/images/areas.png" alt=""><br>Figure 1. Working tree, staging area, and Git directory.<a id="more"></a>
+<h2 id="Installing-Git"><a href="#Installing-Git" class="headerlink" title="Installing Git"></a>Installing Git</h2><ul>
 <li><strong>Installing on Windows</strong><br>The most official build is available for download on the Git website. Just go to <a href="http://git-scm.com/download/win" target="_blank" rel="noopener">http://git-scm.com/download/win</a> and the download will start automatically.</li>
 <li><strong>Installing on Linux (Ubuntu/Debain)</strong><br>If you’re on a Debian-based distribution, such as Ubuntu, try <code>apt</code>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get install git</span><br></pre></td></tr></table></figure>
 </li>
@@ -209,6 +191,9 @@
     </div>
     <footer class="entry-meta entry-footer">
       
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Tool/">Tool</a>
+
       
   <span class="ico-tags"></span>
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -250,16 +235,11 @@
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          【Tool】 Git Basic in Practice (II)
+          Git Basic in Practice (II)
         
       </div>
     </a>
   
-  
-    <a href="/2018/03/30/How-to-Write-a-Research-Proposal/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">How to Write a Research Proposal</div>
-    </a>
   
 </nav>
 
@@ -325,9 +305,6 @@
 
 
     <!-- headerblur min height -->
-    
-      var headerblur = document.getElementById("header-blur");
-      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>

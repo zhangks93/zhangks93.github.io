@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Summary of five Sorting algorithms | Kang&#39;s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Sometimes Coder;Sometimes Painter" />
+  
+  
+  
+    <meta name="baidu-site-verification" content="true" />
+  
+  
+  <meta name="description" content="Bubble SortThe bubble sort makes multiple passes through a list. It compares adjacent items and exchanges those that are out of order. Each pass through the list places the next largest value in its p">
+<meta name="keywords" content="Sort">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Summary of five Sorting algorithms">
+<meta property="og:url" content="http://yoursite.com/2019/10/08/Sorting/index.html">
+<meta property="og:site_name" content="Kang&#39;s">
+<meta property="og:description" content="Bubble SortThe bubble sort makes multiple passes through a list. It compares adjacent items and exchanges those that are out of order. Each pass through the list places the next largest value in its p">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-19T00:01:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Summary of five Sorting algorithms">
+<meta name="twitter:description" content="Bubble SortThe bubble sort makes multiple passes through a list. It compares adjacent items and exchanges those that are out of order. Each pass through the list places the next largest value in its p">
+  
+    <link rel="alternate" href="/atom.xml" title="Kang&#39;s" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" rel="home" >
+                <img style="margin-bottom: 10px;"  width="124px" height="124px" alt="Hike News" src=" /css/images/logo.png">
+              </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Sometimes a Coder</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Sorting" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Summary of five Sorting algorithms
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/10/08/Sorting/" class="article-date">
+	  <time datetime="2019-10-08T14:14:09.000Z" itemprop="datePublished">October 8, 2019</time>
+	</a>
+
+       
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a>Bubble Sort</h2><p>The bubble sort makes multiple passes through a list. It compares adjacent items and exchanges those that are out of order. Each pass through the list places the next largest value in its proper place. In essence, each item “bubbles” up to the location where it belongs.<br><a id="more"></a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">BubbleSort</span><span class="params">(list)</span>:</span></span><br><span class="line">    exchange=<span class="number">0</span></span><br><span class="line">    comparison=<span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(list)<span class="number">-1</span>,<span class="number">0</span>,<span class="number">-1</span>):</span><br><span class="line">             <span class="keyword">for</span> j <span class="keyword">in</span> range(i):</span><br><span class="line">                <span class="keyword">if</span> list[j]&gt;list[j+<span class="number">1</span>]:</span><br><span class="line">                    comparison=comparison+<span class="number">1</span></span><br><span class="line">                    temp=list[j+<span class="number">1</span>]</span><br><span class="line">                    list[j+<span class="number">1</span>]=list[j]</span><br><span class="line">                    list[j]=temp</span><br><span class="line">                    exchange=exchange+<span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    comparison=comparison+<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> list,comparison,exchange</span><br><span class="line">print(BubbleSort([<span class="number">54</span>,<span class="number">26</span>,<span class="number">93</span>,<span class="number">17</span>,<span class="number">77</span>,<span class="number">31</span>,<span class="number">15</span>,<span class="number">8</span>,<span class="number">63</span>,<span class="number">31</span>,<span class="number">44</span>,<span class="number">55</span>,<span class="number">20</span>]))</span><br></pre></td></tr></table></figure>
+<pre><code>([8, 15, 17, 20, 26, 31, 31, 44, 54, 55, 63, 77, 93], 78, 43)
+</code></pre><h2 id="Selection-Sort"><a href="#Selection-Sort" class="headerlink" title="Selection Sort"></a>Selection Sort</h2><p>The selection sort improves on the bubble sort by making only one exchange for every pass through the list. In order to do this, a selection sort looks for the largest value as it makes a pass and, after completing the pass, places it in the proper location. As with a bubble sort, after the first pass, the largest item is in the correct place. After the second pass, the next largest is in place. This process continues and requires n−1 passes to sort n items, since the final item must be in place after the (n−1) st pass.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">SelectionSort</span><span class="params">(list)</span>:</span></span><br><span class="line">    exchange=<span class="number">0</span></span><br><span class="line">    comparison=<span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(list)<span class="number">-1</span>,<span class="number">0</span>,<span class="number">-1</span>):</span><br><span class="line">             max=list[<span class="number">0</span>]</span><br><span class="line">             index=<span class="number">0</span></span><br><span class="line">             <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>,i+<span class="number">1</span>):</span><br><span class="line">                  <span class="keyword">if</span> list[j]&gt;max:</span><br><span class="line">                        comparison=comparison+<span class="number">1</span></span><br><span class="line">                        max=list[j]</span><br><span class="line">                        index=j</span><br><span class="line">                  <span class="keyword">else</span>:</span><br><span class="line">                        comparison=comparison+<span class="number">1</span></span><br><span class="line">             temp=list[i]</span><br><span class="line">             list[i]=list[index]</span><br><span class="line">             list[index]=temp</span><br><span class="line">             exchange=exchange+<span class="number">1</span></span><br><span class="line">                </span><br><span class="line">    <span class="keyword">return</span> list,comparison,exchange</span><br><span class="line">print(SelectionSort([<span class="number">54</span>,<span class="number">26</span>,<span class="number">93</span>,<span class="number">17</span>,<span class="number">77</span>,<span class="number">31</span>,<span class="number">15</span>,<span class="number">8</span>,<span class="number">63</span>,<span class="number">31</span>,<span class="number">44</span>,<span class="number">55</span>,<span class="number">20</span>]))</span><br></pre></td></tr></table></figure>
+<pre><code>([8, 15, 17, 20, 26, 31, 31, 44, 54, 55, 63, 77, 93], 78, 12)
+</code></pre><h2 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a>Insertion Sort</h2><p>The insertion sort, although still O(n2), works in a slightly different way. It always maintains a sorted sublist in the lower positions of the list. Each new item is then “inserted” back into the previous sublist such that the sorted sublist is one item larger</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">InsertionSort</span><span class="params">(list)</span>:</span></span><br><span class="line">    exchange=<span class="number">0</span></span><br><span class="line">    comparison=<span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,len(list)):</span><br><span class="line">             value=list[i]</span><br><span class="line">             index=i</span><br><span class="line">             <span class="keyword">while</span> index&gt;<span class="number">0</span> <span class="keyword">and</span> value&lt;=list[index<span class="number">-1</span>]:</span><br><span class="line">                        list[index]=list[index<span class="number">-1</span>]</span><br><span class="line">                        index=index<span class="number">-1</span></span><br><span class="line">                        comparison=comparison+<span class="number">1</span></span><br><span class="line">                        exchange=exchange+<span class="number">1</span></span><br><span class="line">             list[index]=value</span><br><span class="line">             </span><br><span class="line">                </span><br><span class="line">    <span class="keyword">return</span> list,comparison,exchange</span><br><span class="line">print(InsertionSort([<span class="number">54</span>,<span class="number">26</span>,<span class="number">93</span>,<span class="number">17</span>,<span class="number">77</span>,<span class="number">31</span>,<span class="number">15</span>,<span class="number">8</span>,<span class="number">63</span>,<span class="number">31</span>,<span class="number">44</span>,<span class="number">55</span>,<span class="number">20</span>]))</span><br></pre></td></tr></table></figure>
+<pre><code>([8, 15, 17, 20, 26, 31, 31, 44, 54, 55, 63, 77, 93], 44, 44)
+</code></pre><h2 id="Shell-Sort"><a href="#Shell-Sort" class="headerlink" title="Shell Sort"></a>Shell Sort</h2><p>The shell sort, sometimes called the “diminishing increment sort,” improves on the insertion sort by breaking the original list into a number of smaller sublists, each of which is sorted using an insertion sort. The unique way that these sublists are chosen is the key to the shell sort. Instead of breaking the list into sublists of contiguous items, the shell sort uses an increment i, sometimes called the gap, to create a sublist by choosing all items that are i items apart.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gapinsertionsort</span><span class="params">(nums,start,gap)</span>:</span></span><br><span class="line">             <span class="keyword">for</span> i <span class="keyword">in</span> range(start+gap,len(nums),gap):</span><br><span class="line">                         value=nums[i]</span><br><span class="line">                         index=i</span><br><span class="line">                         <span class="keyword">while</span> index&gt;=gap <span class="keyword">and</span> value&lt;nums[index-gap]:</span><br><span class="line">                                    nums[index]=nums[index-gap]</span><br><span class="line">                                    index=index-gap</span><br><span class="line">                         nums[index]=value</span><br><span class="line">             <span class="keyword">return</span> nums</span><br><span class="line">                        </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ShellSort</span><span class="params">(list)</span>:</span></span><br><span class="line">    count=len(list)//<span class="number">3</span></span><br><span class="line">    <span class="keyword">while</span> count&gt;<span class="number">0</span> :</span><br><span class="line">        <span class="keyword">for</span> position <span class="keyword">in</span> range(count):</span><br><span class="line">               list=gapinsertionsort(list,position,count)</span><br><span class="line">        print(count,list)</span><br><span class="line">        count=count//<span class="number">3</span></span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span> list</span><br><span class="line">print(ShellSort([<span class="number">54</span>,<span class="number">26</span>,<span class="number">93</span>,<span class="number">17</span>,<span class="number">77</span>,<span class="number">31</span>,<span class="number">15</span>,<span class="number">8</span>,<span class="number">63</span>,<span class="number">31</span>,<span class="number">44</span>,<span class="number">55</span>,<span class="number">20</span>]))</span><br></pre></td></tr></table></figure>
+<pre><code>4 [20, 26, 15, 8, 54, 31, 44, 17, 63, 31, 93, 55, 77]
+1 [8, 15, 17, 20, 26, 31, 31, 44, 54, 55, 63, 77, 93]
+[8, 15, 17, 20, 26, 31, 31, 44, 54, 55, 63, 77, 93]
+</code></pre><h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a>Merge Sort</h2><p>Merge sort is a recursive algorithm that continually splits a list in half. If the list is empty or has one item, it is sorted by definition (the base case). If the list has more than one item, we split the list and recursively invoke a merge sort on both halves. Once the two halves are sorted, the fundamental operation, called a merge, is performed. Merging is the process of taking two smaller sorted lists and combining them together into a single, sorted, new list.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">MergeSort</span><span class="params">(list)</span>:</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> len(list)&gt;<span class="number">1</span>:</span><br><span class="line">        point=len(list)//<span class="number">2</span></span><br><span class="line">        left=list[:point]</span><br><span class="line">        right=list[point:]</span><br><span class="line">        MergeSort(left)</span><br><span class="line">        MergeSort(right)</span><br><span class="line">        </span><br><span class="line">        L=<span class="number">0</span></span><br><span class="line">        R=<span class="number">0</span></span><br><span class="line">        k=<span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> L&lt;len(left) <span class="keyword">and</span> R&lt;len(right):</span><br><span class="line">                    <span class="keyword">if</span> left[L]&lt;right[R]:</span><br><span class="line">                        list[k]=left[L]</span><br><span class="line">                        L=L+<span class="number">1</span></span><br><span class="line">                        k=k+<span class="number">1</span></span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        list[k]=right[R]</span><br><span class="line">                        R=R+<span class="number">1</span></span><br><span class="line">                        k=k+<span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> L&lt;len(left):</span><br><span class="line">                        list[k]=left[L]</span><br><span class="line">                        L=L+<span class="number">1</span></span><br><span class="line">                        k=k+<span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> R&lt;len(right):</span><br><span class="line">                        list[k]=right[R]</span><br><span class="line">                        R=R+<span class="number">1</span></span><br><span class="line">                        k=k+<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> list</span><br><span class="line">print(MergeSort([<span class="number">54</span>,<span class="number">26</span>,<span class="number">93</span>,<span class="number">17</span>,<span class="number">77</span>,<span class="number">31</span>,<span class="number">15</span>,<span class="number">8</span>,<span class="number">63</span>,<span class="number">31</span>,<span class="number">44</span>,<span class="number">55</span>,<span class="number">20</span>]))</span><br></pre></td></tr></table></figure>
+<pre><code>[8, 15, 17, 20, 26, 31, 31, 44, 54, 55, 63, 77, 93]
+</code></pre><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>Problem Solving with Algorithms and Data Structures Using Python.  Bradley N. Miller, David L. Ranum. 2005</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sort/">Sort</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/01/06/Stack-Queue-and-linked-list/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Stack,Queue and linked list</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bubble-Sort"><span class="nav-number">1.</span> <span class="nav-text">Bubble Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Selection-Sort"><span class="nav-number">2.</span> <span class="nav-text">Selection Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Insertion-Sort"><span class="nav-number">3.</span> <span class="nav-text">Insertion Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shell-Sort"><span class="nav-number">4.</span> <span class="nav-text">Shell Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Merge-Sort"><span class="nav-number">5.</span> <span class="nav-text">Merge Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">6.</span> <span class="nav-text">Reference</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2019 Kang&#39;s All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>【Tool】 Git Basic in Practice (II) | Kang&#39;s</title>
+  <title>Git Basic in Practice (II) | Kang&#39;s</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Sometimes Coder;Sometimes Painter" />
@@ -16,14 +16,14 @@
   <meta name="description" content="Working with remotesNote: Remote repositories can be on your local machine.It is entirely possible that you can be working with a “remote” repository that is, in fact, on the same host you are. The wo">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Tool】 Git Basic in Practice (II)">
+<meta property="og:title" content="Git Basic in Practice (II)">
 <meta property="og:url" content="http://yoursite.com/2018/06/03/git/index.html">
 <meta property="og:site_name" content="Kang&#39;s">
 <meta property="og:description" content="Working with remotesNote: Remote repositories can be on your local machine.It is entirely possible that you can be working with a “remote” repository that is, in fact, on the same host you are. The wo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-15T05:06:28.000Z">
+<meta property="og:updated_time" content="2019-01-18T22:49:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Tool】 Git Basic in Practice (II)">
+<meta name="twitter:title" content="Git Basic in Practice (II)">
 <meta name="twitter:description" content="Working with remotesNote: Remote repositories can be on your local machine.It is entirely possible that you can be working with a “remote” repository that is, in fact, on the same host you are. The wo">
   
     <link rel="alternate" href="/atom.xml" title="Kang&#39;s" type="application/atom+xml">
@@ -61,32 +61,10 @@
 
 
   
-  
-  <div class="site-header-image">
-    <img id="originBg" width="100%" alt="Hike News" src="">
-  </div>
-
-  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
-    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
-  </div>
-
-  <script>
-        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
-        var random = Math.floor((Math.random() * imgUrls.length ));
-        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
-          document.getElementById("originBg").src=imgUrls[random];
-          document.getElementById("blurBg").src=imgUrls[random];
-        } else {
-          document.getElementById("originBg").src='/' + imgUrls[random];
-          document.getElementById("blurBg").src='/' + imgUrls[random];
-        }
-    </script>
-
-
 
 
 <header id="allheader" class="site-header" role="banner" 
-   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
+   >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -141,7 +119,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      【Tool】 Git Basic in Practice (II)
+      Git Basic in Practice (II)
     </h1>
   
 
@@ -153,7 +131,10 @@
 	  <time datetime="2018-06-03T12:03:53.000Z" itemprop="datePublished">June 3, 2018</time>
 	</a>
 
-       
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Tool/">Tool</a>
+ 
       
 	<span id="busuanzi_container_page_pv">
 	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
@@ -163,15 +144,23 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Working-with-remotes"><a href="#Working-with-remotes" class="headerlink" title="Working with remotes"></a>Working with remotes</h2><p>Note: Remote repositories can be on your local machine.It is entirely possible that you can be working with a “remote” repository that is, in fact, on the same host you are. The word “remote” does not necessarily imply that the repository is somewhere else on the network or Internet, only that it is elsewhere. Working with such a remote repository would still involve all the standard pushing, pulling and fetching operations as with any other remote.</p>
-<h3 id="Showing-Your-Remotes"><a href="#Showing-Your-Remotes" class="headerlink" title="Showing Your Remotes"></a>Showing Your Remotes</h3><p>To see which remote servers you have configured, you can run:</p>
-<pre><code class="git">git remote
-</code></pre>
-<p>You can also specify <code>-v</code>, which shows you the URLs that Git has stored for the shortname to be used when reading and writing to that remote.</p>
+<h3 id="Showing-your-remotes"><a href="#Showing-your-remotes" class="headerlink" title="Showing your remotes"></a>Showing your remotes</h3><p>To see which remote servers you have configured, you can run:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote</span><br></pre></td></tr></table></figure></p>
+<p>You can also specify <code>-v</code>, which shows you the URLs that Git has stored for the shortname to be used when reading and writing to that remote.<br><a id="more"></a></p>
+<h2 id="Making-some-changes"><a href="#Making-some-changes" class="headerlink" title="Making some changes"></a>Making some changes</h2><p>Git is used to create and store some snapshots attached to your project and to compare these files with the following versions. Here are some important commands to accomplish this task.</p>
+<h3 id="From-changes-in-files-to-snapshot"><a href="#From-changes-in-files-to-snapshot" class="headerlink" title="From changes in files to snapshot"></a>From changes in files to snapshot</h3><p>To add some modified files into cache, you can run:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;file name&gt;</span><br></pre></td></tr></table></figure></p>
+<p>It is common to add all files in a folder. So you can run this command to save your time:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure></p>
+<p>After adding these files, you can use the command <code>git status -s</code> to check the status of snapshots in cache. If you want to get the details, you can run:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></p>
+<p>Also, you can check more detailed information by <code>git diff</code>.<br>Note: <code>git status</code> will tell you the modifications put into cache, and <code>git diff</code> will tell you what these changes are row by row.</p>
+<h3 id="From-snapshot-to-repository"><a href="#From-snapshot-to-repository" class="headerlink" title="From snapshot to repository"></a>From snapshot to repository</h3><p>Before you send the git to the remote repository, you must put the changes in snapshots (created by <code>git add</code>) into local repository. So you must run:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m&apos;this is some description about the changes&apos;</span><br></pre></td></tr></table></figure></p>
+<p>After this operation, you can use<code>git status</code> and you can find that nothing to commit (working directory clean).<br>Since you have finished <code>git commit</code>, you can upload your repository to the remote ones like github. Don’t forget to set your name and password just as the former post says.</p>
 
       
     </div>
     <footer class="entry-meta entry-footer">
       
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Tool/">Tool</a>
+
       
   <span class="ico-tags"></span>
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
@@ -209,11 +198,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/08/20/Networks/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/07/30/How-to-Write-a-Research-Proposal/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Networks&#39;
+          How to Write a Research Proposal
         
       </div>
     </a>
@@ -221,7 +210,7 @@
   
     <a href="/2018/05/22/operation/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">【Tool】 Git Basic in Practice (I)</div>
+      <div class="article-nav-title">Git Basic in Practice (I)</div>
     </a>
   
 </nav>
@@ -235,7 +224,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Working-with-remotes"><span class="nav-number">1.</span> <span class="nav-text">Working with remotes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Showing-Your-Remotes"><span class="nav-number">1.1.</span> <span class="nav-text">Showing Your Remotes</span></a></li></ol></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Working-with-remotes"><span class="nav-number">1.</span> <span class="nav-text">Working with remotes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Showing-your-remotes"><span class="nav-number">1.1.</span> <span class="nav-text">Showing your remotes</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Making-some-changes"><span class="nav-number">2.</span> <span class="nav-text">Making some changes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#From-changes-in-files-to-snapshot"><span class="nav-number">2.1.</span> <span class="nav-text">From changes in files to snapshot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#From-snapshot-to-repository"><span class="nav-number">2.2.</span> <span class="nav-text">From snapshot to repository</span></a></li></ol></li></ol>
     
     </div>
   </aside>
@@ -288,9 +277,6 @@
 
 
     <!-- headerblur min height -->
-    
-      var headerblur = document.getElementById("header-blur");
-      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>

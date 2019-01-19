@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/01/06/Stack-Queue-and-linked-list/</loc>
+    
+    <lastmod>2019-01-19T00:04:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/10/08/Sorting/</loc>
+    
+    <lastmod>2019-01-19T00:01:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/11/20/Networks/</loc>
+    
+    <lastmod>2019-01-18T23:06:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/07/30/How-to-Write-a-Research-Proposal/</loc>
+    
+    <lastmod>2019-01-18T22:51:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/06/03/git/</loc>
+    
+    <lastmod>2019-01-18T22:49:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/05/22/operation/</loc>
+    
+    <lastmod>2019-01-18T22:49:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/about/index.html</loc>
     
     <lastmod>2019-01-12T07:34:52.000Z</lastmod>
@@ -9,23 +51,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/01/08/Sorting/</loc>
-    
-    <lastmod>2019-01-08T14:14:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/categories/index.html</loc>
     
     <lastmod>2019-01-07T13:58:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/01/06/Data-Structure-Stack-Queue-and-linked-list/</loc>
-    
-    <lastmod>2019-01-07T13:58:16.000Z</lastmod>
     
   </url>
   
@@ -51,13 +79,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/06/03/git/</loc>
-    
-    <lastmod>2018-11-15T05:06:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/11/14/MySQL-Advanced/</loc>
     
     <lastmod>2018-11-13T21:58:50.000Z</lastmod>
@@ -65,30 +86,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/03/30/How-to-Write-a-Research-Proposal/</loc>
-    
-    <lastmod>2018-11-12T22:21:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/08/20/Regression-1/</loc>
     
     <lastmod>2018-08-20T04:50:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/08/20/Networks/</loc>
-    
-    <lastmod>2018-08-20T04:48:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/05/22/operation/</loc>
-    
-    <lastmod>2018-06-03T12:06:22.000Z</lastmod>
     
   </url>
   
