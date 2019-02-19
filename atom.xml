@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-19T00:04:00.000Z</updated>
+  <updated>2019-02-19T03:15:40.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linear Algebra (I)</title>
+    <link href="http://yoursite.com/2019/02/19/Linear-Algebra-I/"/>
+    <id>http://yoursite.com/2019/02/19/Linear-Algebra-I/</id>
+    <published>2019-02-19T02:56:28.000Z</published>
+    <updated>2019-02-19T03:15:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>The core of linear algebra is the equation <strong><em>Ax=b</em></strong>. In the column and matrix pictures, the right hand side of the equation is a vector b. Given a matrix A, do the linear combinations of its column vectors fill the xy-plane (or space, in the three dimensional case)?If the answer is “no”, we say that A is a <strong>singular</strong> matrix. In this singular case its column vectors are linearly dependent.</p><h2 id="From-vectors-to-matrices-to-subspaces"><a href="#From-vectors-to-matrices-to-subspaces" class="headerlink" title="From vectors to matrices to subspaces"></a>From vectors to matrices to subspaces</h2><h3 id="Vectors"><a href="#Vectors" class="headerlink" title="Vectors"></a>Vectors</h3><p>Vectors just like a combination of scalars.<br>An example in $R^3$ would be:</p><h3 id="Matrices"><a href="#Matrices" class="headerlink" title="Matrices"></a>Matrices</h3><p>Matrices just like a combination of vextors.<br>An example would be:</p><h3 id="subspaces"><a href="#subspaces" class="headerlink" title="subspaces"></a>subspaces</h3><p>A vector space is a collection of vectors that is closed under linear combina­tions. A subspace is a vector space inside another vector space; a plane through the origin in $R^3$ is an example of a subspace.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;The core of linear algebra is the equation &lt;strong&gt;&lt;em&gt;Ax=b&lt;/em&gt;&lt;/strong&gt;. In the column and matrix pictures, the right hand side of the 
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Stack,Queue and linked list</title>
