@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Linear Algebra (I) | Kang&#39;s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Sometimes Coder;Sometimes Painter" />
+  
+  
+  
+    <meta name="baidu-site-verification" content="true" />
+  
+  
+  <meta name="description" content="The core of linear algebra is the equation Ax=b. In the column and matrix pictures, the right hand side of the equation is a vector b. Given a matrix A, do the linear combinations of its column vector">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linear Algebra (I)">
+<meta property="og:url" content="http://yoursite.com/2019/02/16/Linear-Algebra-I/index.html">
+<meta property="og:site_name" content="Kang&#39;s">
+<meta property="og:description" content="The core of linear algebra is the equation Ax=b. In the column and matrix pictures, the right hand side of the equation is a vector b. Given a matrix A, do the linear combinations of its column vector">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/ax-b-and-the-four-subspaces/Unit_1_WIDE.jpg">
+<meta property="og:updated_time" content="2019-02-20T14:18:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linear Algebra (I)">
+<meta name="twitter:description" content="The core of linear algebra is the equation Ax=b. In the column and matrix pictures, the right hand side of the equation is a vector b. Given a matrix A, do the linear combinations of its column vector">
+<meta name="twitter:image" content="https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/ax-b-and-the-four-subspaces/Unit_1_WIDE.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Kang&#39;s" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src="">
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
+
+
+
+
+<header id="allheader" class="site-header" role="banner" 
+   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" rel="home" >
+                <img style="margin-bottom: 10px;"  width="124px" height="124px" alt="Hike News" src=" /css/images/logo.png">
+              </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Sometimes a Coder</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Linear-Algebra-I" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Linear Algebra (I)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/02/16/Linear-Algebra-I/" class="article-date">
+	  <time datetime="2019-02-16T02:56:28.000Z" itemprop="datePublished">February 16, 2019</time>
+	</a>
+
+       
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The core of linear algebra is the equation <strong><em>Ax=b</em></strong>. In the column and matrix pictures, the right hand side of the equation is a vector b. Given a matrix A, do the linear combinations of its column vectors fill the xy-plane (or space, in the three dimensional case)?If the answer is “no”, we say that A is a <strong>singular</strong> matrix. In this singular case its column vectors are linearly dependent.</p>
+<h2 id="From-vectors-to-matrices-to-subspaces"><a href="#From-vectors-to-matrices-to-subspaces" class="headerlink" title="From vectors to matrices to subspaces"></a>From vectors to matrices to subspaces</h2><h3 id="Vectors"><a href="#Vectors" class="headerlink" title="Vectors"></a>Vectors</h3><p>Vectors just like a combination of scalars.<br>An example in $R^3$ would be:</p>
+<h3 id="Matrices"><a href="#Matrices" class="headerlink" title="Matrices"></a>Matrices</h3><p>Matrices just like a combination of vextors.<br>An example would be:</p>
+<h3 id="Vector-space-Subspace"><a href="#Vector-space-Subspace" class="headerlink" title="Vector space/Subspace"></a>Vector space/Subspace</h3><p>A <strong>vector space</strong> is a collection of vectors that is closed under linear combina­tions. Given a matrix A with columns in $R^3$, these columns and all their linear combinations form a subspace of $R^3$.This is the <strong>column space</strong> <em>C(A)</em>. A <strong>subspace</strong> is a vector space inside another vector space.<br>The subspaces of $R^2$ are:</p>
+<ul>
+<li>all of $R^2$;</li>
+<li>any line through origin;</li>
+<li>the zero vector alone.<br>The subspaces of $R^3$ are:</li>
+<li>all of $R^3$;</li>
+<li>any plane through the origin;</li>
+<li>any line through the origin;</li>
+<li>the zero vector alone. </li>
+</ul>
+<h2 id="Elimination-with-matrices"><a href="#Elimination-with-matrices" class="headerlink" title="Elimination with matrices"></a>Elimination with matrices</h2><h3 id="Gauss-elimination"><a href="#Gauss-elimination" class="headerlink" title="Gauss elimination"></a>Gauss elimination</h3><p>So question rises that how to judge wether a matrice is singular or not, in other words, can the linear combination of vectors (vector space) of the matrice equals $R^n$?<br>We repeat the multiplications and substractions (Gauss’ elimination method)on the row of matrices to get an <strong>upper triangular</strong> matrix. An example would be:</p>
+<p>We define the first number that not equalsto zero in each row as <strong>pivot</strong>. The number of pivots in each upper triangular matrix is the <strong>rank</strong> of the matrix. If the rank is smaller than the dimension of each vector (the column space of the matrice), we can say that the matrice is singular, so the equation <strong><em>Ax=b</em></strong> may have no solution. If the row number equals the column number(square matrices), and the matrice can be transfered to matrix $I$, we define that the matrix can be inversed, the <strong>inverse matrix</strong> is writen as $A^-1$. in other words, $A^(-1)A=I$. </p>
+<p>Once we have used Gauss’ elimination method to convert the original matrix to upper triangular form, we go on to use <strong>Gauss-Jordan elimination</strong> eliminating entries in the upper right portion of the matrix. This is the method to get the inverse matrix.</p>
+<h3 id="Factorization-into-A-LU"><a href="#Factorization-into-A-LU" class="headerlink" title="Factorization into $A=LU$"></a>Factorization into $A=LU$</h3><h2 id="The-Four-Spaces"><a href="#The-Four-Spaces" class="headerlink" title="The Four Spaces"></a>The Four Spaces</h2><p><img src="https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/ax-b-and-the-four-subspaces/Unit_1_WIDE.jpg" alt=""></p>
+<h3 id="Nullspace-and-Column-Space"><a href="#Nullspace-and-Column-Space" class="headerlink" title="Nullspace and Column Space"></a>Nullspace and Column Space</h3><p>The nullspaceof a matrix $A$ is the collection of all solutions $x$ that make $Ax=0$. The nullspace is a subspace.</p>
+<h4 id="How-to-compute-the-nullspace"><a href="#How-to-compute-the-nullspace" class="headerlink" title="How to compute the nullspace?"></a>How to compute the nullspace?</h4><p>Elimination steps make a echelon form (upper triganle matrix) $U$. If the rank of the matrix is smaller than space dimension (r&lt;m, a matrix with m rows and n columns), there exist m-r free columns. Suppose these columns equal one (others zero) respectively, we can get the whole nullspace (the linear combinations of the results). On the other hand, by continuing to use the method of elimination we can convert $U$ to a matrix $R$ in reduced row echelon form (rref form), with pivots equal to 1 and zeros above and below the pivots.</p>
+<h4 id="The-application-of-the-nullspace"><a href="#The-application-of-the-nullspace" class="headerlink" title="The application of the nullspace"></a>The application of the nullspace</h4><p>We can use the nullspace to compute the complete solution of any $Ax=b$ by combining a particular solution (set all free variables to zero) and the nullspace. </p>
+<h3 id="Row-space-and-left-nullspace"><a href="#Row-space-and-left-nullspace" class="headerlink" title="Row space and left nullspace"></a>Row space and left nullspace</h3><p>The row space and left nullspace  is the column space and nullspace of the transpose of matrix $A$.</p>
+<h3 id="Orthogonality"><a href="#Orthogonality" class="headerlink" title="Orthogonality"></a>Orthogonality</h3><p>Equation:  Suppose a $m \times n$ matrix $A$, we get:<br>$ rank(A)= number of pivot columns of A = dimensions of C(A) $<br>$= m- dimension of N(A) =m- number of free variables $</p>
+<p>$ rank(A^T)= number of pivot columns of A^T = dimensions of R(A) $<br>$=n- dimension of N(A^T) =m- number of free variables $</p>
+<p>We know that $Subspace S$ is orthogonal to $Subspace T$ means: every vector in $S$ is orthogonal to every vector in $T$.<br>The row space of a  matrix is orthogonal to the nullspace, because $Ax=0$ means the dot product of $x$ with each row of $A$ is 0. But then the product of $x$ with any combination of rows of $A$ must be 0. The column space is orthogonal to the left nullspace of $A$ because the row space of $A^T$ is perpendicular to the nullspace of $A^T$.</p>
+<h2 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h2><p>We’d like to write the projection in terms of a projection matrix $P$: $p=Pb$.<br>$P=\frac{aa^T}{a^Ta}$</p>
+<h3 id="The-application-of-projection"><a href="#The-application-of-projection" class="headerlink" title="The application of projection"></a>The application of projection</h3>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/02/28/Data-Structure-Arrays-Strings-and-Linked-Lists/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          [Data Structure]Arrays,Strings and Linked Lists
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/01/06/Stack-Queue-and-linked-list/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Stack,Queue and linked list</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#From-vectors-to-matrices-to-subspaces"><span class="nav-number">1.</span> <span class="nav-text">From vectors to matrices to subspaces</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vectors"><span class="nav-number">1.1.</span> <span class="nav-text">Vectors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Matrices"><span class="nav-number">1.2.</span> <span class="nav-text">Matrices</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vector-space-Subspace"><span class="nav-number">1.3.</span> <span class="nav-text">Vector space/Subspace</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Elimination-with-matrices"><span class="nav-number">2.</span> <span class="nav-text">Elimination with matrices</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Gauss-elimination"><span class="nav-number">2.1.</span> <span class="nav-text">Gauss elimination</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Factorization-into-A-LU"><span class="nav-number">2.2.</span> <span class="nav-text">Factorization into $A=LU$</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Four-Spaces"><span class="nav-number">3.</span> <span class="nav-text">The Four Spaces</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Nullspace-and-Column-Space"><span class="nav-number">3.1.</span> <span class="nav-text">Nullspace and Column Space</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#How-to-compute-the-nullspace"><span class="nav-number">3.1.1.</span> <span class="nav-text">How to compute the nullspace?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-application-of-the-nullspace"><span class="nav-number">3.1.2.</span> <span class="nav-text">The application of the nullspace</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Row-space-and-left-nullspace"><span class="nav-number">3.2.</span> <span class="nav-text">Row space and left nullspace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Orthogonality"><span class="nav-number">3.3.</span> <span class="nav-text">Orthogonality</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Projection"><span class="nav-number">4.</span> <span class="nav-text">Projection</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-application-of-projection"><span class="nav-number">4.1.</span> <span class="nav-text">The application of projection</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2019 Kang&#39;s All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

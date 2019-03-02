@@ -59,10 +59,32 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src="">
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
+
+
 
 
 <header id="allheader" class="site-header" role="banner" 
-   >
+   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -111,6 +133,48 @@
         
           <section id="main">
   
+    <article id="post-Data-Structure-Arrays-Strings-and-Linked-Lists"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/02/28/Data-Structure-Arrays-Strings-and-Linked-Lists/">[Data Structure]Arrays,Strings and Linked Lists</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/02/28/Data-Structure-Arrays-Strings-and-Linked-Lists/" class="article-date">
+	  <time datetime="2019-02-28T06:59:32.000Z" itemprop="datePublished">February 28, 2019</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>String Compression</strong>: Implement a method to perform basic string compression using the counts<br>of repeated characters. For example, the string aabcccccaaa would become a2b1c5a3. If the<br>“compressed” string would not become smaller than the original string, your method should return<br>the original string. You can assume the string has only uppercase and lowercase letters (a - z).<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Zipper</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">zipString</span><span class="params">(self, iniString)</span>:</span></span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        zipStr = <span class="string">""</span></span><br><span class="line">        strCnt = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(iniString) - <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> iniString[i + <span class="number">1</span>] == iniString[i]:</span><br><span class="line">                strCnt += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                zipStr += iniString[i] + str(strCnt)</span><br><span class="line">                strCnt = <span class="number">1</span></span><br><span class="line">        zipStr += iniString[<span class="number">-1</span>] + str(strCnt)</span><br><span class="line">        <span class="keyword">return</span> zipStr <span class="keyword">if</span> len(zipStr) &lt; len(iniString) <span class="keyword">else</span> iniString</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-Linear-Algebra-I"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -119,7 +183,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/02/19/Linear-Algebra-I/">Linear Algebra (I)</a>
+      <a class="article-title" href="/2019/02/16/Linear-Algebra-I/">Linear Algebra (I)</a>
     </h1>
   
 
@@ -127,8 +191,8 @@
     
     <div class="article-meta">
       
-	<a href="/2019/02/19/Linear-Algebra-I/" class="article-date">
-	  <time datetime="2019-02-19T02:56:28.000Z" itemprop="datePublished">February 19, 2019</time>
+	<a href="/2019/02/16/Linear-Algebra-I/" class="article-date">
+	  <time datetime="2019-02-16T02:56:28.000Z" itemprop="datePublished">February 16, 2019</time>
 	</a>
 
        
@@ -139,8 +203,29 @@
         <p>The core of linear algebra is the equation <strong><em>Ax=b</em></strong>. In the column and matrix pictures, the right hand side of the equation is a vector b. Given a matrix A, do the linear combinations of its column vectors fill the xy-plane (or space, in the three dimensional case)?If the answer is “no”, we say that A is a <strong>singular</strong> matrix. In this singular case its column vectors are linearly dependent.</p>
 <h2 id="From-vectors-to-matrices-to-subspaces"><a href="#From-vectors-to-matrices-to-subspaces" class="headerlink" title="From vectors to matrices to subspaces"></a>From vectors to matrices to subspaces</h2><h3 id="Vectors"><a href="#Vectors" class="headerlink" title="Vectors"></a>Vectors</h3><p>Vectors just like a combination of scalars.<br>An example in $R^3$ would be:</p>
 <h3 id="Matrices"><a href="#Matrices" class="headerlink" title="Matrices"></a>Matrices</h3><p>Matrices just like a combination of vextors.<br>An example would be:</p>
-<h3 id="subspaces"><a href="#subspaces" class="headerlink" title="subspaces"></a>subspaces</h3><p>A vector space is a collection of vectors that is closed under linear combina­tions. A subspace is a vector space inside another vector space; a plane through the origin in $R^3$ is an example of a subspace.</p>
-
+<h3 id="Vector-space-Subspace"><a href="#Vector-space-Subspace" class="headerlink" title="Vector space/Subspace"></a>Vector space/Subspace</h3><p>A <strong>vector space</strong> is a collection of vectors that is closed under linear combina­tions. Given a matrix A with columns in $R^3$, these columns and all their linear combinations form a subspace of $R^3$.This is the <strong>column space</strong> <em>C(A)</em>. A <strong>subspace</strong> is a vector space inside another vector space.<br>The subspaces of $R^2$ are:</p>
+<ul>
+<li>all of $R^2$;</li>
+<li>any line through origin;</li>
+<li>the zero vector alone.<br>The subspaces of $R^3$ are:</li>
+<li>all of $R^3$;</li>
+<li>any plane through the origin;</li>
+<li>any line through the origin;</li>
+<li>the zero vector alone. </li>
+</ul>
+<h2 id="Elimination-with-matrices"><a href="#Elimination-with-matrices" class="headerlink" title="Elimination with matrices"></a>Elimination with matrices</h2><h3 id="Gauss-elimination"><a href="#Gauss-elimination" class="headerlink" title="Gauss elimination"></a>Gauss elimination</h3><p>So question rises that how to judge wether a matrice is singular or not, in other words, can the linear combination of vectors (vector space) of the matrice equals $R^n$?<br>We repeat the multiplications and substractions (Gauss’ elimination method)on the row of matrices to get an <strong>upper triangular</strong> matrix. An example would be:</p>
+<p>We define the first number that not equalsto zero in each row as <strong>pivot</strong>. The number of pivots in each upper triangular matrix is the <strong>rank</strong> of the matrix. If the rank is smaller than the dimension of each vector (the column space of the matrice), we can say that the matrice is singular, so the equation <strong><em>Ax=b</em></strong> may have no solution. If the row number equals the column number(square matrices), and the matrice can be transfered to matrix $I$, we define that the matrix can be inversed, the <strong>inverse matrix</strong> is writen as $A^-1$. in other words, $A^(-1)A=I$. </p>
+<p>Once we have used Gauss’ elimination method to convert the original matrix to upper triangular form, we go on to use <strong>Gauss-Jordan elimination</strong> eliminating entries in the upper right portion of the matrix. This is the method to get the inverse matrix.</p>
+<h3 id="Factorization-into-A-LU"><a href="#Factorization-into-A-LU" class="headerlink" title="Factorization into $A=LU$"></a>Factorization into $A=LU$</h3><h2 id="The-Four-Spaces"><a href="#The-Four-Spaces" class="headerlink" title="The Four Spaces"></a>The Four Spaces</h2><p><img src="https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/ax-b-and-the-four-subspaces/Unit_1_WIDE.jpg" alt=""></p>
+<h3 id="Nullspace-and-Column-Space"><a href="#Nullspace-and-Column-Space" class="headerlink" title="Nullspace and Column Space"></a>Nullspace and Column Space</h3><p>The nullspaceof a matrix $A$ is the collection of all solutions $x$ that make $Ax=0$. The nullspace is a subspace.</p>
+<h4 id="How-to-compute-the-nullspace"><a href="#How-to-compute-the-nullspace" class="headerlink" title="How to compute the nullspace?"></a>How to compute the nullspace?</h4><p>Elimination steps make a echelon form (upper triganle matrix) $U$. If the rank of the matrix is smaller than space dimension (r&lt;m, a matrix with m rows and n columns), there exist m-r free columns. Suppose these columns equal one (others zero) respectively, we can get the whole nullspace (the linear combinations of the results). On the other hand, by continuing to use the method of elimination we can convert $U$ to a matrix $R$ in reduced row echelon form (rref form), with pivots equal to 1 and zeros above and below the pivots.</p>
+<h4 id="The-application-of-the-nullspace"><a href="#The-application-of-the-nullspace" class="headerlink" title="The application of the nullspace"></a>The application of the nullspace</h4><p>We can use the nullspace to compute the complete solution of any $Ax=b$ by combining a particular solution (set all free variables to zero) and the nullspace. </p>
+<h3 id="Row-space-and-left-nullspace"><a href="#Row-space-and-left-nullspace" class="headerlink" title="Row space and left nullspace"></a>Row space and left nullspace</h3><p>The row space and left nullspace  is the column space and nullspace of the transpose of matrix $A$.</p>
+<h3 id="Orthogonality"><a href="#Orthogonality" class="headerlink" title="Orthogonality"></a>Orthogonality</h3><p>Equation:  Suppose a $m \times n$ matrix $A$, we get:<br>$ rank(A)= number of pivot columns of A = dimensions of C(A) $<br>$= m- dimension of N(A) =m- number of free variables $</p>
+<p>$ rank(A^T)= number of pivot columns of A^T = dimensions of R(A) $<br>$=n- dimension of N(A^T) =m- number of free variables $</p>
+<p>We know that $Subspace S$ is orthogonal to $Subspace T$ means: every vector in $S$ is orthogonal to every vector in $T$.<br>The row space of a  matrix is orthogonal to the nullspace, because $Ax=0$ means the dot product of $x$ with each row of $A$ is 0. But then the product of $x$ with any combination of rows of $A$ must be 0. The column space is orthogonal to the left nullspace of $A$ because the row space of $A^T$ is perpendicular to the nullspace of $A^T$.</p>
+<h2 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h2><p>We’d like to write the projection in terms of a projection matrix $P$: $p=Pb$.<br>$P=\frac{aa^T}{a^Ta}$</p>
+<h3 id="The-application-of-projection"><a href="#The-application-of-projection" class="headerlink" title="The application of projection"></a>The application of projection</h3>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -188,7 +273,7 @@
 
           
             <div class="entry-thumbnail">
-              <a href="/2019/01/06/Stack-Queue-and-linked-list/"><img src="http://lorempixel.com/750/450/city/1" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/2019/01/06/Stack-Queue-and-linked-list/"><img src="http://lorempixel.com/750/450/city/9" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
           
           <div class="entry-summary">
@@ -466,7 +551,7 @@ The base of the stack is significant since items stored in the stack that are cl
 
           
             <div class="entry-thumbnail">
-              <a href="/2018/10/08/Sorting/"><img src="http://lorempixel.com/750/450/city/4" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/2018/10/08/Sorting/"><img src="http://lorempixel.com/750/450/city/3" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
           
           <div class="entry-summary">
@@ -568,7 +653,7 @@ The base of the stack is significant since items stored in the stack that are cl
 
           
             <div class="entry-thumbnail">
-              <a href="/2018/07/30/How-to-Write-a-Research-Proposal/"><img src="http://lorempixel.com/750/450/city/7" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/2018/07/30/How-to-Write-a-Research-Proposal/"><img src="http://lorempixel.com/750/450/city/6" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
           
           <div class="entry-summary">
@@ -594,72 +679,6 @@ This paper focuses on proposal writing rather than on the development of researc
       
   <span class="ico-tags"></span>
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/research-proposal/">research proposal</a></li></ul>
-
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-git"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/06/03/git/">Git Basic in Practice (II)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2018/06/03/git/" class="article-date">
-	  <time datetime="2018-06-03T12:03:53.000Z" itemprop="datePublished">June 3, 2018</time>
-	</a>
-
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/Tool/">Tool</a>
- 
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-
-          
-            <div class="entry-thumbnail">
-              <a href="/2018/06/03/git/"><img src="http://lorempixel.com/750/450/city/10" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
-            </div>
-          
-          <div class="entry-summary">
-          Working with remotesNote: Remote repositories can be on your local machine.It is entirely possible that you can be working with a “remote” repository that is, in fact, on the same host you are. The word “remote” does not necessarily imply that the repository is somewhere else on the network or Internet, only that it is elsewhere. Working with such a remote repository would still involve all the standard pushing, pulling and fetching operations as with any other remote.
-Showing your remotesTo see which remote servers you have configured, you can run:1git remote
-You can also specify -v, which shows you the URLs that Git has stored for the shortname to be used when reading and writing to that remote.
-
-        
-          <p class="article-more-link">
-            <a href="/2018/06/03/git/#more">Continue Reading →</a>
-          </p>
-        </div>
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/Tool/">Tool</a>
-
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
 
       
     </footer>
@@ -741,8 +760,20 @@ You can also specify -v, which shows you the URLs that Git has stored for the sh
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/02/19/Linear-Algebra-I/">Linear Algebra (I)</a></h6>
-              <span>February 19, 2019</span>
+              <h6 style="margin: 0;"><a href="/2019/02/28/Data-Structure-Arrays-Strings-and-Linked-Lists/">[Data Structure]Arrays,Strings and Linked Lists</a></h6>
+              <span>February 28, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2019/02/16/Linear-Algebra-I/">Linear Algebra (I)</a></h6>
+              <span>February 16, 2019</span>
             </div>
 
           </li>
@@ -795,18 +826,6 @@ You can also specify -v, which shows you the URLs that Git has stored for the sh
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2018/11/14/MySQL-Advanced/">MySQL Advanced</a></h6>
-              <span>November 14, 2018</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -836,7 +855,7 @@ You can also specify -v, which shows you the URLs that Git has stored for the sh
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -891,6 +910,9 @@ You can also specify -v, which shows you the URLs that Git has stored for the sh
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
