@@ -59,32 +59,10 @@
 
 
   
-  
-  <div class="site-header-image">
-    <img id="originBg" width="100%" alt="Hike News" src="">
-  </div>
-
-  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
-    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
-  </div>
-
-  <script>
-        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
-        var random = Math.floor((Math.random() * imgUrls.length ));
-        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
-          document.getElementById("originBg").src=imgUrls[random];
-          document.getElementById("blurBg").src=imgUrls[random];
-        } else {
-          document.getElementById("originBg").src='/' + imgUrls[random];
-          document.getElementById("blurBg").src='/' + imgUrls[random];
-        }
-    </script>
-
-
 
 
 <header id="allheader" class="site-header" role="banner" 
-   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
+   >
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -141,7 +119,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/02/28/Data-Structure-Arrays-Strings-and-Linked-Lists/">[Data Structure]Arrays,Strings and Linked Lists</a>
+      <a class="article-title" href="/2019/02/28/Data-Structure-Arrays-Strings-and-Linked-Lists/">[Cracking the Coding Interview] Arrays and Strings</a>
     </h1>
   
 
@@ -158,13 +136,19 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>String Compression</strong>: Implement a method to perform basic string compression using the counts<br>of repeated characters. For example, the string aabcccccaaa would become a2b1c5a3. If the<br>“compressed” string would not become smaller than the original string, your method should return<br>the original string. You can assume the string has only uppercase and lowercase letters (a - z).<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Zipper</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">zipString</span><span class="params">(self, iniString)</span>:</span></span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        zipStr = <span class="string">""</span></span><br><span class="line">        strCnt = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(iniString) - <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> iniString[i + <span class="number">1</span>] == iniString[i]:</span><br><span class="line">                strCnt += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                zipStr += iniString[i] + str(strCnt)</span><br><span class="line">                strCnt = <span class="number">1</span></span><br><span class="line">        zipStr += iniString[<span class="number">-1</span>] + str(strCnt)</span><br><span class="line">        <span class="keyword">return</span> zipStr <span class="keyword">if</span> len(zipStr) &lt; len(iniString) <span class="keyword">else</span> iniString</span><br></pre></td></tr></table></figure></p>
+        <p><strong>String Compression</strong>: Implement a method to perform basic string compression using the counts of repeated characters. For example, the string aabcccccaaa would become a2b1c5a3. If the “compressed” string would not become smaller than the original string, your method should returnthe original string. You can assume the string has only uppercase and lowercase letters (a - z).<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Zipper</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">zipString</span><span class="params">(self, iniString)</span>:</span></span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        zipStr = <span class="string">""</span></span><br><span class="line">        strCnt = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(iniString) - <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> iniString[i + <span class="number">1</span>] == iniString[i]:</span><br><span class="line">                strCnt += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                zipStr += iniString[i] + str(strCnt)</span><br><span class="line">                strCnt = <span class="number">1</span></span><br><span class="line">        zipStr += iniString[<span class="number">-1</span>] + str(strCnt)</span><br><span class="line">        <span class="keyword">return</span> zipStr <span class="keyword">if</span> len(zipStr) &lt; len(iniString) <span class="keyword">else</span> iniString</span><br></pre></td></tr></table></figure></p>
+<p><strong>URLify</strong>: Write a method to replace all spaces in a string with ‘%20: You may assume that the string has sufficient space at the end to hold the additional characters, and that you are given the “true” length of the string.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Replacement</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">replaceSpace</span><span class="params">(self, iniString, length)</span>:</span></span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        <span class="keyword">return</span> iniString.replace(<span class="string">" "</span>,<span class="string">"%20"</span>)</span><br></pre></td></tr></table></figure></p>
+<p><strong>Zero Matrix</strong>: Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Clearer</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">clearZero</span><span class="params">(self, mat, n)</span>:</span></span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        row = set()</span><br><span class="line">        col = set()</span><br><span class="line">        <span class="keyword">for</span> r, m <span class="keyword">in</span> enumerate(mat):</span><br><span class="line">            <span class="keyword">for</span> c, n <span class="keyword">in</span> enumerate(m):</span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span> n:</span><br><span class="line">                    row.add(r)</span><br><span class="line">                    col.add(c)</span><br><span class="line">        <span class="keyword">for</span> r <span class="keyword">in</span> row:</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(mat[r])):</span><br><span class="line">                mat[r][i] = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> col:</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(mat)):</span><br><span class="line">                mat[i][c] = <span class="number">0</span></span><br><span class="line">        <span class="keyword">return</span> mat</span><br></pre></td></tr></table></figure></p>
+<p><strong>String Rotation</strong>: Assume you have a method isSubst ring which checks if one word is a substring of another. Given two strings, 51 and 52, write code to check if 52 is a rotation of 51 using only one call to isSubstring (e.g., “waterbottle “ is a rotation of “erbottlewat”).<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ReverseEqual</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">checkReverseEqual</span><span class="params">(self, s1, s2)</span>:</span></span><br><span class="line">        <span class="comment"># write code here</span></span><br><span class="line">        <span class="keyword">return</span> set(s1)==set(s2)</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="entry-meta entry-footer">
       
       
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arrays-Strings-Interview/">Arrays; Strings; Interview</a></li></ul>
+
       
     </footer>
     <hr class="entry-footer-hr">
@@ -273,7 +257,7 @@
 
           
             <div class="entry-thumbnail">
-              <a href="/2019/01/06/Stack-Queue-and-linked-list/"><img src="http://lorempixel.com/750/450/city/9" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/2019/01/06/Stack-Queue-and-linked-list/"><img src="http://lorempixel.com/750/450/city/2" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
           
           <div class="entry-summary">
@@ -551,7 +535,7 @@ The base of the stack is significant since items stored in the stack that are cl
 
           
             <div class="entry-thumbnail">
-              <a href="/2018/10/08/Sorting/"><img src="http://lorempixel.com/750/450/city/3" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/2018/10/08/Sorting/"><img src="http://lorempixel.com/750/450/city/5" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
           
           <div class="entry-summary">
@@ -653,7 +637,7 @@ The base of the stack is significant since items stored in the stack that are cl
 
           
             <div class="entry-thumbnail">
-              <a href="/2018/07/30/How-to-Write-a-Research-Proposal/"><img src="http://lorempixel.com/750/450/city/6" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/2018/07/30/How-to-Write-a-Research-Proposal/"><img src="http://lorempixel.com/750/450/city/4" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
           
           <div class="entry-summary">
@@ -760,7 +744,7 @@ This paper focuses on proposal writing rather than on the development of researc
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/02/28/Data-Structure-Arrays-Strings-and-Linked-Lists/">[Data Structure]Arrays,Strings and Linked Lists</a></h6>
+              <h6 style="margin: 0;"><a href="/2019/02/28/Data-Structure-Arrays-Strings-and-Linked-Lists/">[Cracking the Coding Interview] Arrays and Strings</a></h6>
               <span>February 28, 2019</span>
             </div>
 
@@ -845,7 +829,7 @@ This paper focuses on proposal writing rather than on the development of researc
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Neural-Networks/" style="font-size: 10px;">Neural Networks</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/Sort/" style="font-size: 10px;">Sort</a> <a href="/tags/Stack-Queue-Linked-List/" style="font-size: 10px;">Stack; Queue; Linked List</a> <a href="/tags/research-proposal/" style="font-size: 10px;">research proposal</a>
+      <a href="/tags/Arrays-Strings-Interview/" style="font-size: 10px;">Arrays; Strings; Interview</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Neural-Networks/" style="font-size: 10px;">Neural Networks</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/Sort/" style="font-size: 10px;">Sort</a> <a href="/tags/Stack-Queue-Linked-List/" style="font-size: 10px;">Stack; Queue; Linked List</a> <a href="/tags/research-proposal/" style="font-size: 10px;">research proposal</a>
     </div>
   </div>
 
@@ -910,9 +894,6 @@ This paper focuses on proposal writing rather than on the development of researc
 
 
     <!-- headerblur min height -->
-    
-      var headerblur = document.getElementById("header-blur");
-      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
