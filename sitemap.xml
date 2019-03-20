@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/03/20/Tree/</loc>
+    
+    <lastmod>2019-03-20T13:48:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/02/28/Data-Structure-Arrays-Strings-and-Linked-Lists/</loc>
     
     <lastmod>2019-03-02T15:03:02.000Z</lastmod>
